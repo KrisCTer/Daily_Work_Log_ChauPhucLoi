@@ -1,59 +1,33 @@
 ---
 title: "Worklog Tuần 2"
-date: 2024-01-01
-weight: 1
+date: 2026-05-01
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm kiến thức nền tảng về VPC: CIDR, Public/Private Subnet, Availability Zone, Internet Gateway, NAT Gateway, Route Table.
+* Xây dựng VPC tùy chỉnh với subnet đa vùng (multi-AZ), phân biệt Security Group (stateful) và NACL (stateless), tìm hiểu VPN/Direct Connect/Load Balancer.
+* Thiết lập Hybrid DNS với Route 53 Resolver, cấu hình VPC Peering và Transit Gateway, dùng Session Manager để truy cập EC2 an toàn mà không cần key pair.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                                                                                                                                                                                                                                                                         |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2   | **VIDEO FCJ BOOTCAMP:**<br>&emsp; - Module 02-01: AWS Virtual Private Cloud (#25, 38:03) – lý thuyết VPC toàn diện<br>**THỰC HÀNH & HỌC THÊM:**<br>&emsp; - Tìm hiểu VPC: CIDR, Subnet (Public/Private), Availability Zone<br>&emsp; - Tìm hiểu Internet Gateway, NAT Gateway, Route Table<br>&emsp; - Vẽ sơ đồ VPC 2-tier (Public subnet EC2 + Private subnet RDS)<br>**LAB & GHI CHÚ:**<br>&emsp; - Ghi chú: CIDR notation, Public/Private subnet, Route Table<br>&emsp; - Vẽ sơ đồ VPC 2-tier trên draw.io                                                                                        | 27/04/2026   | 27/04/2026      | [youtube.com playlist #25](https://youtube.com) <br> [000003.awsstudygroup.com](https://000003.awsstudygroup.com/)                                                                                                                                                                                                                     |
+| 3   | **VIDEO FCJ BOOTCAMP:**<br>&emsp; - Module 02-02: VPC Security and Multi-VPC features (#26, 28:35)<br>&emsp; - Module 02-03: VPN - DirectConnect - LoadBalancer (#27, 23:44)<br>**THỰC HÀNH & HỌC THÊM:**<br>&emsp; - Lab: tạo VPC tùy chỉnh (10.0.0.0/16)<br>&emsp; - Tạo 2 public subnet + 2 private subnet (multi-AZ)<br>&emsp; - Gắn IGW, tạo NAT Gateway<br>&emsp; - Cấu hình Route Tables đúng cho từng subnet<br>**LAB & GHI CHÚ:**<br>&emsp; - Ghi chú: Security Group (stateful) vs NACL (stateless), VPC Peering, TGW<br>&emsp; - Lab 000003: Amazon VPC and AWS Site-to-Site VPN Workshop | 28/04/2026   | 28/04/2026      | [youtube.com playlist #26-27, #28-44](https://youtube.com) <br> [000003.awsstudygroup.com](https://000003.awsstudygroup.com/) <br> [000092.awsstudygroup.com](https://000092.awsstudygroup.com/) <br> [000074.awsstudygroup.com](https://000074.awsstudygroup.com/) <br> [000006.awsstudygroup.com](https://000006.awsstudygroup.com/) |
+| 4   | **VIDEO FCJ BOOTCAMP:**<br>&emsp; - Module 02-Lab10-01→06: Hybrid DNS với Route 53 Resolver (#45-55)<br>**THỰC HÀNH & HỌC THÊM:**<br>&emsp; - Tìm hiểu Route 53: hosted zone, record types, resolver<br>&emsp; - Cấu hình Inbound/Outbound Resolver Endpoint<br>&emsp; - Test phân giải DNS giữa on-prem (giả lập) và AWS<br>**LAB & GHI CHÚ:**<br>&emsp; - Lab 000010: Set up Hybrid DNS with Route 53 Resolver<br>&emsp; - Ghi chú: on-prem DNS resolution qua Route 53 Inbound/Outbound Endpoint                                                                                                  | 29/04/2026   | 29/04/2026      | [000010.awsstudygroup.com](https://000010.awsstudygroup.com/) <br> playlist #45-55                                                                                                                                                                                                                                                     |
+| 5   | **VIDEO FCJ BOOTCAMP:**<br>&emsp; - Lab19-01→07: Set up VPC Peering (#56-64) – tạo peering, cấu hình route, test ping<br>&emsp; - Module 02-Lab20-01→07: AWS Transit Gateway (#65-71)<br>**THỰC HÀNH & HỌC THÊM:**<br>&emsp; - Tìm hiểu VPC Peering: use-case, routing, DNS resolution, giới hạn non-transitive<br>&emsp; - Tạo Peering Connection giữa 2 VPC, cấu hình Route Table<br>&emsp; - Tìm hiểu Transit Gateway: hub-spoke topology, so sánh với VPC Peering<br>**LAB & GHI CHÚ:**<br>&emsp; - Lab 000019: Setting up VPC Peering<br>&emsp; - Lab 000020: Set up AWS Transit Gateway        | 30/04/2026   | 30/04/2026      | [000019.awsstudygroup.com](https://000019.awsstudygroup.com/) <br> [000020.awsstudygroup.com](https://000020.awsstudygroup.com/) <br> playlist #56-71                                                                                                                                                                                  |
+| 6   | **THỰC HÀNH & HỌC THÊM:**<br>&emsp; - Lab: Session Manager - SSH vào EC2 không cần key pair, không mở port 22<br>&emsp; - VPC Endpoint cho SSM (không cần NAT Gateway cho traffic SSM)<br>&emsp; - Thiết kế sơ đồ Networking tổng hợp (VPC + Peering + TGW + DNS)<br>&emsp; - Viết Worklog Tuần 2 – review chi phí NAT Gateway/TGW<br>&emsp; - Tối ưu: xoá NAT khi không dùng (tiết kiệm $32/tháng)<br>**LAB & GHI CHÚ:**<br>&emsp; - Lab 000058: Work with Amazon System Manager - Session Manager<br>&emsp; - Viết Worklog Tuần 2<br>&emsp; - Cleanup: xoá NAT Gateway không cần                   | 01/05/2026   | 01/05/2026      | [000058.awsstudygroup.com](https://000058.awsstudygroup.com/) <br> [rules.fcjuni.com](https://rules.fcjuni.com/)                                                                                                                                                                                                                       |
 
 
 ### Kết quả đạt được tuần 2:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Nền tảng VPC:** Hiểu CIDR notation (/16, /24, /28), phân biệt rõ Public vs Private subnet, hoàn thiện sơ đồ VPC 2-tier.
+* **VPC tùy chỉnh & Bảo mật:** Tạo VPC tùy chỉnh (10.0.0.0/16) với 2 public + 2 private subnet đa vùng (multi-AZ); gắn IGW, tạo NAT Gateway, cấu hình Route Table đúng. Phân biệt rõ Security Group (stateful) và NACL (stateless); EC2 trong private subnet ping internet thành công qua NAT. Hoàn thành Lab 000003.
+* **Hybrid DNS:** Thiết lập Hybrid DNS với Route 53 Resolver, cấu hình đúng Inbound/Outbound Resolver Endpoint. Hoàn thành Lab 000010.
+* **VPC Peering & Transit Gateway:** VPC Peering connection ở trạng thái ACTIVE, ping cross-VPC thành công, hiểu rõ giới hạn non-transitive. Kết nối 3 VPC qua Transit Gateway, hiểu hub-spoke topology. Hoàn thành Lab 000019 và Lab 000020.
+* **Session Manager & Chi phí:** SSH vào EC2 qua Session Manager thành công với port 22 đóng. Hoàn thành Lab 000058. Module 2 hoàn thành 5/5 lab. Biết cách tối ưu chi phí NAT Gateway, hoàn thiện Worklog Tuần 2.

@@ -1,59 +1,32 @@
 ---
 title: "Worklog Tuần 7"
-date: 2024-01-01
-weight: 1
+date: 2026-06-05
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Xây dựng Data Lake trên AWS kết hợp S3, Glue Data Catalog và Athena để truy vấn.
+* Nắm vững DynamoDB chuyên sâu: partition key, sort key, GSI/LSI, Global Tables và DynamoDB Streams.
+* Hoàn thiện pipeline Analytics đầy đủ (ingest → transform → catalog → query) và xây dashboard QuickSight tương tác, tổng kết toàn bộ 7 Module.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                                                                                           |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2   | **VIDEO FCJ BOOTCAMP:** <br> - Module 07-Lab35-3.1→7: Data Analytics Pipeline – S3, Kinesis Firehose, Glue Crawler, Athena, QuickSight (#246-256) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu Data Lake concepts: S3 + Glue Catalog + Athena <br> - Xây dựng data lake cơ bản trên S3, crawl data bằng Glue Crawler <br> **LAB & GHI CHÚ:** <br> - Lab 000035: Data Lake on AWS <br> - Ghi chú: Kinesis Firehose delivery stream, Glue Data Catalog                                                                                                | 01/06/2026   | 01/06/2026      | [000035.awsstudygroup.com](https://000035.awsstudygroup.com/) <br>playlist #246-256                                                                      |
+| 3   | **VIDEO FCJ BOOTCAMP:** <br> - Lab39-1→8: DynamoDB – LHOL, Explore, Backup, Advanced Patterns, Global Serverless App, Event-driven (#257-264) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu DynamoDB: partition key, sort key, GSI/LSI <br> - CRUD operations với SDK/CLI, thử Global Tables <br> **LAB & GHI CHÚ:** <br> - Lab 000039: Amazon DynamoDB Immersion Day <br> - Ghi chú: DynamoDB GSI, LSI, DynamoDB Streams, Global Tables                                                                                                             | 02/06/2026   | 02/06/2026      | [000039.awsstudygroup.com](https://000039.awsstudygroup.com/) <br>playlist #257-264                                                                      |
+| 4   | **VIDEO FCJ BOOTCAMP:** <br> - Lab60-1→3: DynamoDB CloudShell, Console, SDK (#273-275) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu AWS Glue ETL job và Amazon Athena query <br> - Viết Glue ETL job transform data, query bằng Athena SQL <br> **LAB & GHI CHÚ:** <br> - Lab 000040: Cost and performance analysis with AWS Glue and Amazon Athena <br> - Lab 000060: Work with Amazon DynamoDB                                                                                                                                                    | 03/06/2026   | 03/06/2026      | [000040.awsstudygroup.com](https://000040.awsstudygroup.com/) <br>[000060.awsstudygroup.com](https://000060.awsstudygroup.com/) <br>playlist #273-275    |
+| 5   | **VIDEO FCJ BOOTCAMP:** <br> - Lab70-1.1→2.3: DataBrew – Cloud9, Download Dataset, Upload S3, Setup DataBrew, Data Profiling, Clean & Transform (#276-281) <br> - Lab72-2→13: Data Lake – Glue, EMR, Athena, Kinesis Analytics, QuickSight, Lambda, Redshift (#282-293) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu xây dựng Datalake từ dữ liệu thực tế <br> - Tích hợp pipeline: ingest → transform → catalog → query <br> **LAB & GHI CHÚ:** <br> - Lab 000070: Building a Datalake with Your Data <br> - Lab 000072: Analytics on AWS workshop | 04/06/2026   | 04/06/2026      | [000070.awsstudygroup.com](https://000070.awsstudygroup.com/) <br>[000072.awsstudygroup.com](https://000072.awsstudygroup.com/) <br>playlist #276-293    |
+| 6   | **VIDEO FCJ BOOTCAMP:** <br> - Lab73-3→5: QuickSight Dashboard – Build, Improve, Interactive Dashboard (#294-296) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Xây dashboard QuickSight từ dữ liệu Athena/Glue <br> - Viết Worklog Tuần 7 – TỔNG KẾT 7 MODULE đã hoàn thành (35 lab) <br> - Lên ý tưởng Capstone Project (Genzite) cho 5 tuần tiếp theo <br> **LAB & GHI CHÚ:** <br> - Lab 000073: Get started with QuickSight <br> - Viết Worklog Tuần 7                                                                                                    | 05/06/2026   | 05/06/2026      | [000073.awsstudygroup.com](https://000073.awsstudygroup.com/) <br>playlist #294-296 <br>[rules.fcjuni.com/3-project](https://rules.fcjuni.com/3-project) |
 
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Data Lake:** Data Lake pipeline S3 → Glue → Athena chạy được, Glue Data Catalog hiển thị đúng schema. Hoàn thành Lab 000035.
+* **DynamoDB:** DynamoDB table CRUD thành công, Global Table multi-region replicate, event-driven architecture với DDB Streams → Lambda. Hoàn thành Lab 000039.
+* **Glue ETL & Athena:** Glue ETL job chạy thành công, Athena query trả kết quả đúng, DynamoDB CRUD qua SDK (boto3). Hoàn thành Lab 000040 và Lab 000060.
+* **Data Lake end-to-end:** DataBrew profile + transform dataset thành công, Datalake end-to-end với dữ liệu thực hoạt động, analytics pipeline hoàn chỉnh. Hoàn thành Lab 000070 và Lab 000072.
+* **QuickSight Dashboard & Tổng kết:** Interactive Dashboard QuickSight hoàn chỉnh. Hoàn thành Lab 000073. Module 7 hoàn thành 7/7 lab. **HOÀN TẤT TOÀN BỘ 7 MODULE (Tuần 1-7)**. Hoàn thành Worklog Tuần 7.

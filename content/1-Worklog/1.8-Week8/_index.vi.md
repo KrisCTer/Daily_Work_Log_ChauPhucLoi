@@ -1,59 +1,33 @@
 ---
 title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+date: 2026-06-12
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Khởi động Capstone Project Genzite: vừa học các bài AWS còn cần theo nhu cầu thực tế (Container/ECS, CloudWatch nâng cao, Secrets Manager, ElastiCache) vừa triển khai Genzite lên AWS thật.
+* Containerize ai-service (Dockerfile, ECR) và deploy lên ECS Fargate.
+* Xử lý 3 bug ưu tiên: BullMQ sync bypass, SDK crash khi response chỉ có function-call, thiếu Prisma `$transaction`.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                                                                                                              |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2   | **HỌC THÊM (tham khảo):** <br> - ECS: cluster, task definition, service, Fargate vs EC2 launch type <br> - ECR: repository, image tagging, lifecycle policy <br> **GENZITE:** <br> - Viết Dockerfile cho ai-service (NestJS 11 modular monolith) <br> - Build image local, test container chạy đúng với Prisma + Redis kết nối ngoài <br> - Đẩy thử image lên ECR (Elastic Container Registry) <br> **LAB & GHI CHÚ:** <br> - Tham khảo: cloudjourney.awsstudygroup.com/5-container                                                                                   | 08/06/2026   | 08/06/2026      | [cloudjourney.awsstudygroup.com/5-container](https://cloudjourney.awsstudygroup.com/5-container) <br>[docs.aws.amazon.com/AmazonECR](https://docs.aws.amazon.com/AmazonECR) |
+| 3   | **HỌC THÊM (tham khảo):** <br> - ElastiCache for Redis – cluster mode, endpoint, security group cho Redis managed <br> **GENZITE – FIX BUG #1:** Synchronous BullMQ bypass trong generation controllers <br> - Refactor controller: chuyển toàn bộ generation request sang enqueue job qua BullMQ thay vì xử lý đồng bộ <br> - Test lại job processor, xác nhận response trả về job ID + polling status <br> **LAB & GHI CHÚ:** <br> - Tham khảo: docs.aws.amazon.com/AmazonElastiCache                                                                               | 09/06/2026   | 09/06/2026      | [docs.aws.amazon.com/AmazonElastiCache](https://docs.aws.amazon.com/AmazonElastiCache) <br>[docs.bullmq.io](https://docs.bullmq.io)                                         |
+| 4   | **HỌC THÊM (tham khảo):** <br> - AWS Secrets Manager: rotation, versioning, cross-account <br> **GENZITE – FIX BUG #2:** Unhandled SDK crash khi Gemini trả response chỉ có function-call (không có text) <br> - Thêm try/catch + type-guard kiểm tra `response.candidates` trước khi parse text <br> - Viết unit test case: function-call-only, text-only, mixed response <br> - Migrate Gemini API key từ hardcode `.env` → Secrets Manager <br> **LAB & GHI CHÚ:** <br> - Tham khảo: docs.aws.amazon.com/secretsmanager                                            | 10/06/2026   | 10/06/2026      | [docs.aws.amazon.com/secretsmanager](https://docs.aws.amazon.com/secretsmanager) <br>[ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)                 |
+| 5   | **HỌC THÊM (tham khảo):** <br> - CloudWatch nâng cao: custom metrics, embedded metric format, Logs Insights <br> **GENZITE – FIX BUG #3:** Thiếu Prisma `$transaction` wrapping cho dependent inserts <br> - Bọc các thao tác insert phụ thuộc (ví dụ: tạo page + components liên quan) trong `prisma.$transaction()` <br> - Test rollback khi 1 insert con thất bại, đảm bảo data consistency <br> **LAB & GHI CHÚ:** <br> - Tham khảo: www.prisma.io/docs/orm/prisma-client/queries/transactions                                                                    | 11/06/2026   | 11/06/2026      | [www.prisma.io/docs/.../transactions](https://www.prisma.io/docs/orm/prisma-client/queries/transactions) <br>[skillbuilder.aws](https://skillbuilder.aws)                   |
+| 6   | **GENZITE:** <br> - Deploy thử ai-service lên ECS Fargate (image đã build từ Thứ 2) <br> - Kết nối ECS task với ElastiCache Redis + Secrets Manager đã setup <br> - Tạo CloudWatch Dashboard cơ bản giám sát ai-service (CPU/Memory/Error rate) <br> - Test end-to-end: gọi API generation thật → BullMQ job → Gemini → lưu DB qua `$transaction` <br> - Review lại 3 bug đã fix, viết changelog <br> - Viết Worklog Tuần 8 + cập nhật Proposal Capstone (Genzite) theo mẫu FCJ <br> **LAB & GHI CHÚ:** <br> - github.com/KrisCTer/Genzite <br> - Viết Worklog Tuần 8 | 12/06/2026   | 12/06/2026      | [github.com/KrisCTer/Genzite](https://github.com/KrisCTer/Genzite) <br>[rules.fcjuni.com/3-project](https://rules.fcjuni.com/3-project)                                     |
 
 
 ### Kết quả đạt được tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Containerization:** Hiểu rõ ECS Fargate vs EC2 launch type. Dockerfile ai-service build thành công, container chạy đúng local, image đã push lên ECR.
+* **ElastiCache & Fix Bug #1:** Hiểu ElastiCache Redis managed service khác gì self-host Redis. Generation controller không còn block request đồng bộ; job BullMQ chạy đúng async, có thể scale worker riêng.
+* **Secrets Manager & Fix Bug #2:** Secrets Manager lưu Gemini API key, ai-service đọc qua SDK (không hardcode `.env`). SDK không còn crash với response function-call-only; unit test pass cả 3 case response.
+* **CloudWatch & Fix Bug #3:** Hiểu CloudWatch Logs Insights query language. Tất cả insert phụ thuộc đã bọc `$transaction`; test rollback thành công – không còn dữ liệu mồ côi (orphan record) khi lỗi giữa chừng.
+* **Deploy & Tổng kết:** ai-service chạy ổn định trên ECS Fargate, Dashboard CloudWatch giám sát cơ bản hoạt động, flow generation end-to-end hoạt động đúng (async, không crash, data consistent). 3 bug ưu tiên đã fix & verify xong. Changelog + Worklog Tuần 8 hoàn chỉnh.

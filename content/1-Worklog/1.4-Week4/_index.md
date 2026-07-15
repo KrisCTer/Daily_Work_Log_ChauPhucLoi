@@ -1,57 +1,32 @@
 ---
 title: "Week 4 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-15
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master S3 fundamentals: buckets, storage classes, Static Website Hosting, CloudFront, Versioning, and Cross-Region Replication.
+* Set up AWS Backup for EC2/EBS, and practice VM Import/Export (lift-and-shift) and Storage Gateway for hybrid file access.
+* Deploy Amazon FSx for Windows File Server and compare it with EFS, S3, and EBS for different storage use-cases.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to be implemented this week:
+| Day | Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Start Date | End Date   | References                                                                                                                                                    |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mon | **FCJ BOOTCAMP VIDEOS:** <br> - Module 03-Lab57-02.1: Create S3 bucket (#90, 1:16) <br> - Module 03-Lab57-02.2: Load data (#91, 3:27) <br> - Module 03-Lab57-03: Enable static website feature (#92, 0:47) <br> - Module 03-Lab57-04: Configuring public access block (#93, 0:37) <br> - Module 03-Lab57-05: Configuring public objects (#94, 1:13) <br> - Module 03-Lab57-06: Test website (#95, 1:10) <br> **PRACTICE & LEARN MORE:** <br> - Learn about Amazon S3: buckets, objects, storage classes <br> - Learn about S3 Static Website Hosting, public-read bucket policy <br> **LABS & NOTES:** <br> - Lab 000057 (part 1): Starting with Amazon S3                                                                                                                       | 11/05/2026 | 11/05/2026 | [000057.awsstudygroup.com](https://000057.awsstudygroup.com) <br> playlist #90-95                                                                             |
+| Tue | **FCJ BOOTCAMP VIDEOS:** <br> - Module 03-Lab57-07.1: Block all public access (#96, 0:47) <br> - Module 03-Lab57-07.2: Config Amazon CloudFront (#97, 7:50) <br> - Module 03-Lab57-07.3: Test Amazon CloudFront (#98, 1:18) <br> - Module 03-Lab57-08: Bucket Versioning (#99, 3:18) <br> - Module 03-Lab57-09: Move objects (#100, 2:12) <br> - Module 03-Lab57-10: Replication Object multi Region (#101, 4:21) <br> - Module 03-Lab57-11: Clean up resources (#102, 8:20) <br> **PRACTICE & LEARN MORE:** <br> - Configure CloudFront in front of S3, enable Versioning, Cross-region Replication <br> - Learn about Glacier retrieval options, S3 storage classes & cost <br> **LABS & NOTES:** <br> - Lab 000057 (part 2, continued): CloudFront + Versioning + Replication | 12/05/2026 | 12/05/2026 | [000057.awsstudygroup.com](https://000057.awsstudygroup.com) <br> playlist #96-102 <br> [draw.io](https://draw.io)                                            |
+| Wed | **FCJ BOOTCAMP VIDEOS:** <br> - Module 03-Lab13-01: Deploy AWS Backup – Introduction (#81, 0:37) <br> - Module 03-Lab13-02.2: Deploy infrastructure (#82, 2:40) <br> - Module 03-Lab13-03: Create Backup plan (#83, 2:41) <br> - Module 03-Lab13-05: Test Restore (#84, 7:37) <br> - Module 03-Lab13-06: Clean up resources (#85, 4:09) <br> - Lab13-02.1→06: Advanced AWS Backup – S3 bucket, Notify (#107-112) <br> **PRACTICE & LEARN MORE:** <br> - Learn about AWS Backup: backup plans, vaults, cross-region <br> - Configure a daily backup plan for EC2 + EBS <br> - Test restore from a recovery point <br> **LABS & NOTES:** <br> - Lab 000013: Deploy AWS Backup to the System                                                                                        | 13/05/2026 | 13/05/2026 | [000013.awsstudygroup.com](https://000013.awsstudygroup.com) <br> playlist #81-85, #107-112                                                                   |
+| Thu | **FCJ BOOTCAMP VIDEOS:** <br> - Lab14-01→05: VM Import/Export – VMware → EC2 → export back (#113-120) <br> - Lab24-2.1→3: Storage Gateway – Create, File Shares, Mount, Cleanup (#121-124) <br> - Lab03-Lab24-01.1→02.2: Storage Gateway (#86-89) <br> **PRACTICE & LEARN MORE:** <br> - Learn about VM Import/Export: lift-and-shift migration <br> - Import a VM (OVA/VMDK) to EC2, export EC2 back to a VM image <br> - Learn about Storage Gateway: File Gateway, mount a file share from on-prem <br> **LABS & NOTES:** <br> - Lab 000014: VM Import/Export <br> - Lab 000024: Using File Storage Gateway                                                                                                                                                                   | 14/05/2026 | 14/05/2026 | [000014.awsstudygroup.com](https://000014.awsstudygroup.com) <br> [000024.awsstudygroup.com](https://000024.awsstudygroup.com) <br> playlist #86-89, #113-124 |
+| Fri | **FCJ BOOTCAMP VIDEOS:** <br> - Lab25-2.2→13: FSx for Windows – SSD/HDD, File shares, Performance, Dedup, Shadow copies, Quotas (#125-136) <br> **PRACTICE & LEARN MORE:** <br> - Learn about Amazon FSx for Windows File Server: SMB protocol, Multi-AZ <br> - Create an FSx file system, mount it from EC2 <br> - Compare FSx vs EFS vs S3 vs EBS (use-case table) <br> - Write the Week 4 Worklog – summarize Module 4 (Storage) <br> **LABS & NOTES:** <br> - Lab 000025: Amazon FSx for Windows File Server <br> - Compare EFS vs FSx vs EBS vs S3 – use-case comparison table <br> - Write Week 4 Worklog                                                                                                                                                                  | 15/05/2026 | 15/05/2026 | [000025.awsstudygroup.com](https://000025.awsstudygroup.com) <br> playlist #125-136 <br> [rules.fcjuni.com](https://rules.fcjuni.com)                         |
 
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **S3 Fundamentals:** Successfully created an S3 bucket, accessed the Static Website via its endpoint, and correctly configured public access. Completed Lab 000057 (part 1).
+* **CloudFront, Versioning & Replication:** CloudFront distribution set up in front of S3, Versioning enabled with successful old-version restore testing, Cross-region Replication configured. Completed Lab 000057 in full.
+* **AWS Backup:** Configured a daily backup plan for EC2 + EBS, and successfully tested restore from a recovery point. Completed Lab 000013.
+* **VM Import/Export & Storage Gateway:** Successfully imported a VM from OVA to EC2, understood the EC2 → VM image export process, and successfully mounted Storage Gateway from on-prem. Completed Lab 000014 and Lab 000024.
+* **FSx for Windows:** FSx for Windows Multi-AZ working correctly, enabled data deduplication to save space, and built a complete comparison table across the 4 storage services. Completed Lab 000025.
+* **Summary:** Module 4 fully completed (5/5 labs). Completed the Week 4 Worklog.

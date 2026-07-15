@@ -1,57 +1,31 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-12
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Kick off the Genzite Capstone Project: learn the remaining AWS topics needed on-demand (Container/ECS, advanced CloudWatch, Secrets Manager, ElastiCache) while deploying Genzite to real AWS infrastructure.
+* Containerize the ai-service (Dockerfile, ECR) and deploy it to ECS Fargate.
+* Fix 3 priority bugs: synchronous BullMQ bypass, SDK crash on function-call-only responses, and missing Prisma `$transaction` wrapping.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to be implemented this week:
+| Day | Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Start Date | End Date   | References                                                                                                                                                                   |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mon | **REFERENCE LEARNING:** <br> - ECS: cluster, task definition, service, Fargate vs EC2 launch type <br> - ECR: repository, image tagging, lifecycle policy <br> **GENZITE:** <br> - Write a Dockerfile for the ai-service (NestJS 11 modular monolith) <br> - Build the image locally, test the container connects correctly to external Prisma + Redis <br> - Push the image to ECR (Elastic Container Registry) <br> **LABS & NOTES:** <br> - Reference: cloudjourney.awsstudygroup.com/5-container                                                                                                                         | 08/06/2026 | 08/06/2026 | [cloudjourney.awsstudygroup.com/5-container](https://cloudjourney.awsstudygroup.com/5-container) <br> [docs.aws.amazon.com/AmazonECR](https://docs.aws.amazon.com/AmazonECR) |
+| Tue | **REFERENCE LEARNING:** <br> - ElastiCache for Redis – cluster mode, endpoint, security group for managed Redis <br> **GENZITE – FIX BUG #1:** Synchronous BullMQ bypass in generation controllers <br> - Refactor the controller: move all generation requests to enqueue jobs via BullMQ instead of synchronous processing <br> - Re-test the job processor, confirm the response returns a job ID + polling status <br> **LABS & NOTES:** <br> - Reference: docs.aws.amazon.com/AmazonElastiCache                                                                                                                         | 09/06/2026 | 09/06/2026 | [docs.aws.amazon.com/AmazonElastiCache](https://docs.aws.amazon.com/AmazonElastiCache) <br> [docs.bullmq.io](https://docs.bullmq.io)                                         |
+| Wed | **REFERENCE LEARNING:** <br> - AWS Secrets Manager: rotation, versioning, cross-account <br> **GENZITE – FIX BUG #2:** Unhandled SDK crash when Gemini returns a function-call-only response (no text) <br> - Add try/catch + type-guard checking `response.candidates` before parsing text <br> - Write unit tests: function-call-only, text-only, mixed response <br> - Migrate the Gemini API key from hardcoded `.env` to Secrets Manager <br> **LABS & NOTES:** <br> - Reference: docs.aws.amazon.com/secretsmanager                                                                                                    | 10/06/2026 | 10/06/2026 | [docs.aws.amazon.com/secretsmanager](https://docs.aws.amazon.com/secretsmanager) <br> [ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)                 |
+| Thu | **REFERENCE LEARNING:** <br> - Advanced CloudWatch: custom metrics, embedded metric format, Logs Insights <br> **GENZITE – FIX BUG #3:** Missing Prisma `$transaction` wrapping for dependent inserts <br> - Wrap dependent insert operations (e.g. creating a page + its related components) in `prisma.$transaction()` <br> - Test rollback when a child insert fails, ensuring data consistency <br> **LABS & NOTES:** <br> - Reference: www.prisma.io/docs/orm/prisma-client/queries/transactions                                                                                                                        | 11/06/2026 | 11/06/2026 | [www.prisma.io/docs/.../transactions](https://www.prisma.io/docs/orm/prisma-client/queries/transactions) <br> [skillbuilder.aws](https://skillbuilder.aws)                   |
+| Fri | **GENZITE:** <br> - Deploy the ai-service (image built on Monday) to ECS Fargate <br> - Connect the ECS task to the ElastiCache Redis + Secrets Manager set up earlier this week <br> - Create a basic CloudWatch Dashboard to monitor the ai-service (CPU/Memory/Error rate) <br> - End-to-end test: real generation API call → BullMQ job → Gemini → save to DB via `$transaction` <br> - Review the 3 fixed bugs, write a changelog <br> - Write the Week 8 Worklog + update the Capstone Proposal (Genzite) using the FCJ template <br> **LABS & NOTES:** <br> - github.com/KrisCTer/Genzite <br> - Write Week 8 Worklog | 12/06/2026 | 12/06/2026 | [github.com/KrisCTer/Genzite](https://github.com/KrisCTer/Genzite) <br> [rules.fcjuni.com/3-project](https://rules.fcjuni.com/3-project)                                     |
 
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **Containerization:** Clearly understood ECS Fargate vs EC2 launch type. The ai-service Dockerfile built successfully, container running correctly locally, and the image pushed to ECR.
+* **ElastiCache & Bug Fix #1:** Understood ElastiCache managed Redis vs self-hosted Redis. The generation controller no longer blocks on synchronous requests; BullMQ jobs now run correctly async and workers can scale independently.
+* **Secrets Manager & Bug Fix #2:** Secrets Manager storing the Gemini API key, read by the ai-service via SDK (no more `.env` hardcoding). SDK no longer crashes on function-call-only responses; unit tests pass for all 3 response cases.
+* **CloudWatch & Bug Fix #3:** Understood CloudWatch Logs Insights query language. All dependent inserts now wrapped in `$transaction`; rollback tested successfully — no more orphan records when a mid-flow error occurs.
+* **Deployment & Summary:** ai-service running stably on ECS Fargate, basic CloudWatch Dashboard monitoring working, end-to-end generation flow working correctly (async, no crashes, consistent data). All 3 priority bugs fixed and verified. Changelog and Week 8 Worklog completed.

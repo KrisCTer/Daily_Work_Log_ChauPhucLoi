@@ -1,57 +1,32 @@
 ---
 title: "Week 3 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-08
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master EC2 fundamentals: instance types, AMI, EBS, key pairs, user data, and instance metadata.
+* Deploy load distribution and compute expansion systems with EC2 Auto Scaling to enhance High Availability.
+* Monitor infrastructure with CloudWatch (Metrics, Alarms, Dashboards, Logs Insights), and explore Amazon Lightsail as a simpler, lower-cost alternative to EC2.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to be implemented this week:
+| Day | Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Start Date | End Date   | References                                                                                                                                                                       |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mon | **FCJ BOOTCAMP VIDEOS:** <br> - Module 03-01: Compute VM on AWS (#72, 1:55) – overview <br> - Module 03-01-01: EC2 Instance type (#73, 12:21) <br> - Module 03-01-02: EC2 AMI / Backup / Key Pair (#74, 7:11) <br> - Module 03-01-03: EC2 Elastic Block Store (#75, 8:38) <br> - Module 03-01-04: EC2 Instance store (#76, 4:15) <br> **PRACTICE & LEARN MORE:** <br> - Learn about EC2: instance types, AMI, EBS, Elastic IP, key pair <br> - Practice: create an EC2 t2.micro, install Nginx, verify the web page <br> **LABS & NOTES:** <br> - Lab 000004: Introduction to Amazon EC2 <br> - Notes: compare instance types, EBS vs Instance Store | 04/05/2026 | 04/05/2026 | [000004.awsstudygroup.com](https://000004.awsstudygroup.com) <br> [youtube.com playlist #72-76](https://youtube.com)                                                             |
+| Tue | **FCJ BOOTCAMP VIDEOS:** <br> - Module 03-01-05: EC2 User data (#77, 2:58) <br> - Module 03-01-06: EC2 Meta data (#78, 4:29) <br> - Module-03-02: EC2 Autoscaling - EFS/FSx - Lightsail - MGN (#80, 24:56) <br> **PRACTICE & LEARN MORE:** <br> - Practice: launch an EC2 t2.micro, use user data to install Nginx automatically <br> - Learn about the metadata endpoint (169.254.169.254) <br> **LABS & NOTES:** <br> - Notes: User data vs Metadata, Auto Scaling Group concept                                                                                                                                                                   | 05/05/2026 | 05/05/2026 | [youtube.com playlist #77-80](https://youtube.com)                                                                                                                               |
+| Wed | **FCJ BOOTCAMP VIDEOS:** <br> - Module 03-01-07: EC2 Auto scaling (#79, 1:39) <br> **PRACTICE & LEARN MORE:** <br> - Learn about EC2 Auto Scaling: Launch Template, Scaling Policy, Target Tracking <br> - Lab: create an Auto Scaling Group with min=1, max=3 <br> - Configure Target Tracking (CPU > 70%) <br> - Test scale-out using a stress tool <br> **LABS & NOTES:** <br> - Lab 000006: Deploying FCJ Management Application with Auto Scaling Group                                                                                                                                                                                         | 06/05/2026 | 06/05/2026 | [000006.awsstudygroup.com](https://000006.awsstudygroup.com) <br> playlist #79                                                                                                   |
+| Thu | **PRACTICE & LEARN MORE:** <br> - Learn about CloudWatch: Metrics, Alarms, Dashboards, Log Groups <br> - Lab: create a CloudWatch Dashboard with EC2 + ASG metrics <br> - Create an Alarm: CPU > 80% → SNS email <br> - Learn about CloudWatch Logs Insights (query language) <br> **LABS & NOTES:** <br> - Lab 000008: AWS CloudWatch Workshop                                                                                                                                                                                                                                                                                                      | 07/05/2026 | 07/05/2026 | [000008.awsstudygroup.com](https://000008.awsstudygroup.com)                                                                                                                     |
+| Fri | **PRACTICE & LEARN MORE:** <br> - Learn about Amazon Lightsail: managed compute, simpler than EC2 <br> - Compare Lightsail vs EC2 cost for small workloads <br> - Deploy a demo application on a Lightsail instance <br> - Learn about Lightsail Container, deploy a simple app <br> - Compare ECS/EC2 Fargate vs Lightsail Container on cost & complexity <br> - Write the Week 3 Worklog <br> **LABS & NOTES:** <br> - Lab 000045: Amazon Lightsail Workshop – Cost Optimization on AWS <br> - Lab 000046: Amazon Lightsail Container – Run apps on Lightsail Container <br> - Write Week 3 Worklog                                                | 08/05/2026 | 08/05/2026 | [000045.awsstudygroup.com](https://000045.awsstudygroup.com) <br> [000046.awsstudygroup.com](https://000046.awsstudygroup.com) <br> [rules.fcjuni.com](https://rules.fcjuni.com) |
 
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **EC2 Fundamentals:** Distinguished instance families (T/C/M/R), clearly understood EBS vs Instance Store, and learned how to create an AMI snapshot. EC2 successfully running Nginx, accessible via public IP, and SSH access confirmed. Completed Lab 000004.
+* **User Data & Metadata:** EC2 running Nginx via user data automation, understood the metadata endpoint (169.254.169.254), and grasped the Auto Scaling Group concept.
+* **Auto Scaling:** Successfully set up an Auto Scaling Group that automatically scales out when CPU is high and scales in after load decreases, triggered correctly by CloudWatch alarms. Completed Lab 000006.
+* **CloudWatch Monitoring:** Built a complete CloudWatch Dashboard with 5 widgets, configured an alarm that triggers an email when CPU is high, and used Logs Insights queries to find ERROR logs. Completed Lab 000008.
+* **Lightsail:** Successfully ran a Lightsail instance, understood when to use Lightsail instead of EC2 for cost savings, and successfully deployed a Lightsail Container app. Completed Lab 000045 and Lab 000046.
+* **Summary:** Module 3 fully completed (5/5 labs). Completed the Week 3 Worklog.

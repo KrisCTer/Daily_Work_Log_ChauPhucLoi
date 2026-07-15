@@ -1,59 +1,31 @@
 ---
 title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+date: 2026-05-22
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững kiến thức nền tảng IAM: Users, Groups, Roles, Policies, Shared Responsibility Model, và nguyên tắc Least Privilege.
+* Thực hành IAM Role cho truy cập liên dịch vụ, Cognito, AWS Organizations, Identity Center, KMS và Security Hub.
+* Áp dụng kiểm soát truy cập nâng cao với Resource Tags, Access Analyzer, Permission Boundary và Condition Key, dùng Lambda để tối ưu chi phí EC2.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                                                                                                                                                          |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2   | **VIDEO FCJ BOOTCAMP:** <br> - Module 05-01: Shared Responsibility Model (#150, 14:13) <br> - Module 05-02: Amazon IAM (#151, 32:46) – Users, Groups, Roles, Policies, STS <br> **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu IAM: Users, Groups, Roles, Policies <br> - Nguyên tắc Least Privilege <br> - Lab: tạo IAM User cho developer (chỉ quyền S3 read) <br> - Tạo IAM Group 'Developers' và 'Admins' <br> **LAB & GHI CHÚ:** <br> - Lab 000002: AWS IAM Access Control <br> - Ghi chú: Shared Responsibility, ARN format, Policy JSON structure                                                                                                                                                          | 18/05/2026   | 18/05/2026      | [000002.awsstudygroup.com](https://000002.awsstudygroup.com/) <br>playlist #150-151                                                                                                                                     |
+| 3   | **VIDEO FCJ BOOTCAMP:** <br> - Module 05-03: Amazon Cognito (#152, 9:14) <br> - Module 05-04: AWS Organization (#153, 8:04) <br> - Module 05-05: AWS Identity Center (#154, 6:42) <br> - Module 05-06: Amazon KMS (#155, 5:47) <br> - Module 05-07: AWS Security Hub (#156, 4:29) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu IAM Role: EC2 role, Lambda role, Cross-account <br> - Lab: tạo IAM Role cho EC2 truy cập S3 (không cần Access Key) <br> - Bật MFA cho root account và IAM user <br> **LAB & GHI CHÚ:** <br> - Lab 000048: Granting authorization for an application to access AWS services with an IAM role <br> - Lab 000012: Using AWS IAM Identity Center for Robust Identity Management | 19/05/2026   | 19/05/2026      | [000048.awsstudygroup.com](https://000048.awsstudygroup.com/) <br>[000012.awsstudygroup.com](https://000012.awsstudygroup.com/) <br>playlist #152-157                                                                   |
+| 4   | **VIDEO FCJ BOOTCAMP:** <br> - Lab28-2.1: Create IAM user (#177, 2:17) <br> - Lab28-3: Create IAM Policy (#178, 5:05) <br> - Lab28-4: Create IAM Role (#179, 2:49) <br> - Lab28-5.1→5.2.5: Switch Roles + test tag-based access (#180-185) <br> - Lab28-6: Clean up (#186) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu Resource Tags & Resource Groups <br> - Gắn tag cho EC2/S3, viết Policy JSON dùng Condition theo tag <br> - Lab: IAM Access Analyzer - phát hiện resource public <br> **LAB & GHI CHÚ:** <br> - Lab 000027: Manage Resources Using Tags and Resource Groups <br> - Lab 000028: Manage Access to EC2 Services with Resource Tags through IAM Services                                | 20/05/2026   | 20/05/2026      | [000027.awsstudygroup.com](https://000027.awsstudygroup.com/) <br>[000028.awsstudygroup.com](https://000028.awsstudygroup.com/) <br>playlist #177-186                                                                   |
+| 5   | **VIDEO FCJ BOOTCAMP:** <br> - Lab44-2→5: IAM Group, Users, Admin Role, Switch Role by IP/Time (#202-209) <br> - Lab30-3→6: Restriction Policy, IAM Limited User, Test limits (#187-190) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu IAM Role & Condition Key, thực hành Switch Role có điều kiện (IP/Time) <br> - Tìm hiểu IAM Permission Boundary, test giới hạn quyền user <br> - Lab33 KMS + CloudTrail + Athena: mã hoá S3 object bằng KMS <br> **LAB & GHI CHÚ:** <br> - Lab 000044: IAM Role & Condition <br> - Lab 000030: Limitation of User Rights with IAM Permission Boundary <br> - Lab 000033: Encrypt at rest with AWS KMS                                                                 | 21/05/2026   | 21/05/2026      | [000044.awsstudygroup.com](https://000044.awsstudygroup.com/) <br>[000030.awsstudygroup.com](https://000030.awsstudygroup.com/) <br>[000033.awsstudygroup.com](https://000033.awsstudygroup.com/) <br>playlist #187-209 |
+| 6   | **VIDEO FCJ BOOTCAMP:** <br> - Lab18-02→04: Enable Security Hub, Score criteria (#158-160) <br> - Lab22-2.1→7: Lambda tự động Stop/Start EC2 qua Slack webhook (#161-170) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Bật Security Hub, xem findings/score <br> - Lambda tự động stop/start EC2 theo schedule để tiết kiệm chi phí <br> - Viết Worklog Tuần 5 – tổng hợp Module 5 (IAM & Security) <br> **LAB & GHI CHÚ:** <br> - Lab 000018: Getting Started with AWS Security Hub <br> - Lab 000022: Optimizing EC2 Costs with Lambda <br> - Viết Worklog Tuần 5                                                                                                                                                 | 22/05/2026   | 22/05/2026      | [000018.awsstudygroup.com](https://000018.awsstudygroup.com/) <br>[000022.awsstudygroup.com](https://000022.awsstudygroup.com/) <br>playlist #158-170 <br>[rules.fcjuni.com](https://rules.fcjuni.com/)                 |
 
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Nền tảng IAM:** Nắm rõ Shared Responsibility Model, hiểu cấu trúc Policy JSON (Effect/Action/Resource) và định dạng ARN. Tạo IAM User với đúng permission; test thành công developer không xoá được EC2. Hoàn thành Lab 000002.
+* **IAM Role & Dịch vụ Identity:** Phân biệt Cognito User Pool vs Identity Pool, hiểu AWS Organizations & SCP. EC2 dùng Role truy cập S3 thành công, MFA bật cho root account, Identity Center SSO cấu hình thành công. Hoàn thành Lab 000048 và Lab 000012.
+* **Resource Tags & Access Analyzer:** IAM User, Group, Role, Policy tạo thành công. Switch Role hoạt động đúng giữa 2 region, Resource Group lọc đúng theo tag, IAM Policy giới hạn truy cập theo tag thành công, Access Analyzer phát hiện S3 bucket public. Hoàn thành Lab 000027 và Lab 000028.
+* **Condition Key, Permission Boundary & KMS:** IAM Role với Condition hoạt động đúng, Switch Role bị chặn ngoài giờ/IP lạ, Permission Boundary chặn đúng hành vi vượt giới hạn, S3 object mã hoá bằng KMS thành công. Hoàn thành Lab 000044, Lab 000030 và Lab 000033.
+* **Security Hub & Tối ưu chi phí:** Security Hub hiển thị findings/score, Lambda tự stop/start EC2 đúng giờ. Hoàn thành Lab 000018 và Lab 000022. Module 5 hoàn thành 10/10 lab. Hoàn thành Worklog Tuần 5.

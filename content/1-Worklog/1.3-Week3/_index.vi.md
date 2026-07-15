@@ -1,59 +1,33 @@
 ---
 title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+date: 2026-05-08
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững kiến thức nền tảng về EC2: instance types, AMI, EBS, key pair, user data, và metadata.
+* Triển khai hệ thống phân tải và mở rộng tính toán với EC2 Auto Scaling nhằm tăng cường tính sẵn sàng (High Availability).
+* Giám sát hạ tầng với CloudWatch (Metrics, Alarms, Dashboard, Logs Insights), và tìm hiểu Amazon Lightsail như một lựa chọn đơn giản, tiết kiệm chi phí hơn EC2.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                                                                                                                    |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2   | **VIDEO FCJ BOOTCAMP:** <br> - Module 03-01: Compute VM on AWS (#72, 1:55) – tổng quan <br> - Module 03-01-01: EC2 Instance type (#73, 12:21) <br> - Module 03-01-02: EC2 AMI / Backup / Key Pair (#74, 7:11) <br> - Module 03-01-03: EC2 Elastic Block Store (#75, 8:38) <br> - Module 03-01-04: EC2 Instance store (#76, 4:15) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu EC2: instance types, AMI, EBS, Elastic IP, key pair <br> - Thực hành: tạo EC2 t2.micro, cài Nginx, verify web <br> **LAB & GHI CHÚ:** <br> - Lab 000004: Introduction to Amazon EC2 <br> - Ghi chú: so sánh instance types, EBS vs Instance Store | 04/05/2026   | 04/05/2026      | [000004.awsstudygroup.com](https://000004.awsstudygroup.com/) <br>[youtube.com playlist #72-76](https://youtube.com)                                                              |
+| 3   | **VIDEO FCJ BOOTCAMP:** <br> - Module 03-01-05: EC2 User data (#77, 2:58) <br> - Module 03-01-06: EC2 Meta data (#78, 4:29) <br> - Module-03-02: EC2 Autoscaling - EFS/FSx - Lightsail - MGN (#80, 24:56) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Thực hành: launch EC2 t2.micro, dùng user data cài Nginx tự động <br> - Tìm hiểu metadata endpoint (169.254.169.254) <br> **LAB & GHI CHÚ:** <br> - Ghi chú: User data vs Metadata, Auto Scaling Group khái niệm                                                                                                                                                                  | 05/05/2026   | 05/05/2026      | [youtube.com playlist #77-80](https://youtube.com)                                                                                                                                |
+| 4   | **VIDEO FCJ BOOTCAMP:** <br> - Module 03-01-07: EC2 Auto scaling (#79, 1:39) <br> **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu EC2 Auto Scaling: Launch Template, Scaling Policy, Target Tracking <br> - Lab: tạo Auto Scaling Group với min=1, max=3 <br> - Cấu hình Target Tracking (CPU > 70%) <br> - Test scale-out bằng stress tool <br> **LAB & GHI CHÚ:** <br> - Lab 000006: Deploying FCJ Management Application with Auto Scaling Group                                                                                                                                                                                     | 06/05/2026   | 06/05/2026      | [000006.awsstudygroup.com](https://000006.awsstudygroup.com/) <br>playlist #79                                                                                                    |
+| 5   | **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu CloudWatch: Metrics, Alarms, Dashboards, Log Groups <br> - Lab: tạo CloudWatch Dashboard với EC2 + ASG metrics <br> - Tạo Alarm: CPU > 80% → SNS email <br> - Tìm hiểu CloudWatch Logs Insights (query language) <br> **LAB & GHI CHÚ:** <br> - Lab 000008: AWS CloudWatch Workshop                                                                                                                                                                                                                                                                                                     | 07/05/2026   | 07/05/2026      | [000008.awsstudygroup.com](https://000008.awsstudygroup.com/)                                                                                                                     |
+| 6   | **THỰC HÀNH & HỌC THÊM:** <br> - Tìm hiểu Amazon Lightsail: managed compute, đơn giản hơn EC2 <br> - So sánh chi phí Lightsail vs EC2 cho workload nhỏ <br> - Deploy 1 ứng dụng demo trên Lightsail instance <br> - Tìm hiểu Lightsail Container, deploy app đơn giản <br> - So sánh ECS/EC2 Fargate vs Lightsail Container về cost & complexity <br> - Viết Worklog Tuần 3 <br> **LAB & GHI CHÚ:** <br> - Lab 000045: Amazon Lightsail Workshop - Cost Optimization on AWS <br> - Lab 000046: Amazon Lightsail Container - Run apps on Lightsail Container <br> - Viết Worklog Tuần 3                                            | 08/05/2026   | 08/05/2026      | [000045.awsstudygroup.com](https://000045.awsstudygroup.com/) <br>[000046.awsstudygroup.com](https://000046.awsstudygroup.com/) <br>[rules.fcjuni.com](https://rules.fcjuni.com/) |
 
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* **Nền tảng EC2:** Phân biệt các instance families (T/C/M/R), hiểu rõ EBS vs Instance Store, biết cách tạo AMI snapshot. EC2 chạy Nginx thành công, truy cập được qua public IP, SSH vào instance thành công. Hoàn thành Lab 000004.
+* **User Data & Metadata:** EC2 chạy Nginx tự động qua user data, hiểu metadata endpoint (169.254.169.254), nắm được khái niệm Auto Scaling Group.
+* **Auto Scaling:** Thiết lập thành công Auto Scaling Group tự động scale-out khi CPU cao và scale-in khi tải giảm, được kích hoạt đúng bởi CloudWatch alarm. Hoàn thành Lab 000006.
+* **Giám sát CloudWatch:** Xây dựng hoàn chỉnh CloudWatch Dashboard với 5 widget, cấu hình alarm gửi email khi CPU cao, dùng Logs Insights query để tìm ERROR logs. Hoàn thành Lab 000008.
+* **Lightsail:** Chạy thành công Lightsail instance, hiểu khi nào nên dùng Lightsail thay EC2 để tiết kiệm chi phí, deploy thành công app trên Lightsail Container. Hoàn thành Lab 000045 và Lab 000046.
+* **Tổng kết:** Module 3 hoàn thành 5/5 lab. Hoàn thành Worklog Tuần 3.

@@ -1,57 +1,31 @@
 ---
 title: "Week 7 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-05
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 7 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Build a Data Lake on AWS combining S3, Glue Data Catalog, and Athena for querying.
+* Master DynamoDB in depth: partition key, sort key, GSI/LSI, Global Tables, and DynamoDB Streams.
+* Complete a full Analytics pipeline (ingest → transform → catalog → query) and build an interactive QuickSight dashboard, wrapping up all 7 core Modules.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to be implemented this week:
+| Day | Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Start Date | End Date   | References                                                                                                                                                |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mon | **FCJ BOOTCAMP VIDEOS:** <br> - Module 07-Lab35-3.1→7: Data Analytics Pipeline – S3, Kinesis Firehose, Glue Crawler, Athena, QuickSight (#246-256) <br> **PRACTICE & LEARN MORE:** <br> - Learn about Data Lake concepts: S3 + Glue Catalog + Athena <br> - Build a basic data lake on S3, crawl data with a Glue Crawler <br> **LABS & NOTES:** <br> - Lab 000035: Data Lake on AWS <br> - Notes: Kinesis Firehose delivery stream, Glue Data Catalog                                                                                                                  | 01/06/2026 | 01/06/2026 | [000035.awsstudygroup.com](https://000035.awsstudygroup.com) <br> playlist #246-256                                                                       |
+| Tue | **FCJ BOOTCAMP VIDEOS:** <br> - Lab39-1→8: DynamoDB – LHOL, Explore, Backup, Advanced Patterns, Global Serverless App, Event-driven (#257-264) <br> **PRACTICE & LEARN MORE:** <br> - Learn about DynamoDB: partition key, sort key, GSI/LSI <br> - CRUD operations via SDK/CLI, try out Global Tables <br> **LABS & NOTES:** <br> - Lab 000039: Amazon DynamoDB Immersion Day <br> - Notes: DynamoDB GSI, LSI, DynamoDB Streams, Global Tables                                                                                                                         | 02/06/2026 | 02/06/2026 | [000039.awsstudygroup.com](https://000039.awsstudygroup.com) <br> playlist #257-264                                                                       |
+| Wed | **FCJ BOOTCAMP VIDEOS:** <br> - Lab60-1→3: DynamoDB CloudShell, Console, SDK (#273-275) <br> **PRACTICE & LEARN MORE:** <br> - Learn about the AWS Glue ETL job and Amazon Athena query <br> - Write a Glue ETL job to transform data, query with Athena SQL <br> **LABS & NOTES:** <br> - Lab 000040: Cost and performance analysis with AWS Glue and Amazon Athena <br> - Lab 000060: Work with Amazon DynamoDB                                                                                                                                                       | 03/06/2026 | 03/06/2026 | [000040.awsstudygroup.com](https://000040.awsstudygroup.com) <br> [000060.awsstudygroup.com](https://000060.awsstudygroup.com) <br> playlist #273-275     |
+| Thu | **FCJ BOOTCAMP VIDEOS:** <br> - Lab70-1.1→2.3: DataBrew – Cloud9, Download Dataset, Upload S3, Setup DataBrew, Data Profiling, Clean & Transform (#276-281) <br> - Lab72-2→13: Data Lake – Glue, EMR, Athena, Kinesis Analytics, QuickSight, Lambda, Redshift (#282-293) <br> **PRACTICE & LEARN MORE:** <br> - Learn how to build a Data Lake using real-world data <br> - Integrate the full pipeline: ingest → transform → catalog → query <br> **LABS & NOTES:** <br> - Lab 000070: Building a Datalake with Your Data <br> - Lab 000072: Analytics on AWS workshop | 04/06/2026 | 04/06/2026 | [000070.awsstudygroup.com](https://000070.awsstudygroup.com) <br> [000072.awsstudygroup.com](https://000072.awsstudygroup.com) <br> playlist #276-293     |
+| Fri | **FCJ BOOTCAMP VIDEOS:** <br> - Lab73-3→5: QuickSight Dashboard – Build, Improve, Interactive Dashboard (#294-296) <br> **PRACTICE & LEARN MORE:** <br> - Build a QuickSight dashboard from Athena/Glue data <br> - Write the Week 7 Worklog – SUMMARIZE all 7 completed Modules (35 labs) <br> - Brainstorm ideas for the Capstone Project (Genzite) for the next 5 weeks <br> **LABS & NOTES:** <br> - Lab 000073: Get started with QuickSight <br> - Write Week 7 Worklog                                                                                            | 05/06/2026 | 05/06/2026 | [000073.awsstudygroup.com](https://000073.awsstudygroup.com) <br> playlist #294-296 <br> [rules.fcjuni.com/3-project](https://rules.fcjuni.com/3-project) |
 
 
 ### Week 7 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **Data Lake:** Data Lake pipeline running successfully (S3 → Glue → Athena), Glue Data Catalog correctly displaying schema. Completed Lab 000035.
+* **DynamoDB:** DynamoDB table CRUD working successfully, Global Table with multi-region replication, event-driven architecture built with DDB Streams → Lambda. Completed Lab 000039.
+* **Glue ETL & Athena:** Glue ETL job ran successfully, Athena query returned correct results, DynamoDB CRUD completed via SDK (boto3). Completed Lab 000040 and Lab 000060.
+* **End-to-end Data Lake:** DataBrew profiling + transform on a real dataset completed, end-to-end Data Lake with real data working, full analytics pipeline completed. Completed Lab 000070 and Lab 000072.
+* **QuickSight Dashboard & Summary:** Interactive QuickSight Dashboard fully built. Completed Lab 000073. Module 7 fully completed (7/7 labs). **ALL 7 MODULES COMPLETED (Weeks 1-7)**. Completed the Week 7 Worklog.

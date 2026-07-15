@@ -1,57 +1,30 @@
 ---
 title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-29
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Deepen Database knowledge on AWS: RDS engines, Multi-AZ (High Availability), Read Replica (performance), and Aurora Serverless v2.
+* Practice the Database Migration Service (DMS): Schema Conversion Tool, Full Load + CDC migration.
+* Deploy PROJECT 1 (Personal Blog Website) combining EC2, RDS, S3, and IAM Role from previous weeks' infrastructure.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to be implemented this week:
+| Day | Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Start Date | End Date   | References                                                                          |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ----------------------------------------------------------------------------------- |
+| Mon | **FCJ BOOTCAMP VIDEOS:** <br> - Module 06-01: Database Concepts review (#217, 37:19) – relational vs NoSQL, ACID <br> - Module 06-02: Amazon RDS & Aurora (#218, 29:50) – engines, Multi-AZ, Read Replica <br> **PRACTICE & LEARN MORE:** <br> - Learn about Amazon RDS: engines (MySQL/PostgreSQL), Multi-AZ, Read Replica <br> - Lab: create an RDS MySQL db.t3.micro in a private subnet <br> - Connect to RDS from EC2 using a MySQL client <br> **LABS & NOTES:** <br> - Notes: RDS engines (MySQL/PG/Oracle/MSSQL/Aurora), backup retention           | 25/05/2026 | 25/05/2026 | playlist #217-218                                                                   |
+| Tue | **FCJ BOOTCAMP VIDEOS:** <br> - Module 06-03: Redshift - ElastiCache (#219, 19:49) <br> - Lab05-2.1→7: RDS practice – VPC, SG, Subnet Group, EC2, RDS, App Deploy, Backup, Cleanup (#220-228) <br> **PRACTICE & LEARN MORE:** <br> - Learn about RDS Multi-AZ (High Availability) and Read Replica (performance) <br> - Test Multi-AZ failover, measure Read Replica latency <br> - Backup/restore, automated snapshot <br> **LABS & NOTES:** <br> - Lab 000005: Amazon Relational Database Service (Amazon RDS)                                            | 26/05/2026 | 26/05/2026 | [000005.awsstudygroup.com](https://000005.awsstudygroup.com) <br> playlist #219-228 |
+| Wed | **FCJ BOOTCAMP VIDEOS:** <br> - Lab43-01→17: Database Migration Service (DMS) – RDP, Fleet Manager, MSSQL/Oracle config, Schema Conversion, Migration Task, Troubleshoot (#229-245) <br> **PRACTICE & LEARN MORE:** <br> - Learn about Database Migration Service (DMS): Homogeneous vs Heterogeneous migration <br> - Use the Schema Conversion Tool (SCT) <br> - Create a migration task: Full Load + CDC <br> **LABS & NOTES:** <br> - Lab 000043: Database Schema Conversion & Migration <br> - Notes: Homogeneous vs Heterogeneous migration, SCT tool | 27/05/2026 | 27/05/2026 | [000043.awsstudygroup.com](https://000043.awsstudygroup.com) <br> playlist #229-245 |
+| Thu | **PRACTICE & LEARN MORE:** <br> - **PROJECT 1: Personal Blog Website (start)** <br> - Deploy EC2 (t2.micro) in the VPC created in Module 2 <br> - Install WordPress/Nginx + connect to RDS MySQL (Module 6) <br> - Store media on S3 (Module 4), assign an IAM Role to EC2 (Module 5) <br> - Configure the Security Group following proper principles <br> **LABS & NOTES:** <br> - Deploy EC2 in the Week 2 VPC, install WordPress/Nginx <br> - IAM Role for EC2 to access S3 (media bucket)                                                               | 28/05/2026 | 28/05/2026 | [cloudjourney.awsstudygroup.com](https://cloudjourney.awsstudygroup.com)            |
+| Fri | **PRACTICE & LEARN MORE:** <br> - Finalize PROJECT 1: Personal Blog (EC2 + RDS + S3 + IAM Role), estimated cost ~$25/month <br> - Write Project 1 documentation: architecture, cost <br> - Write the Week 6 Worklog – summarize Module 6 (Database) <br> - Cleanup unused test RDS resources <br> **LABS & NOTES:** <br> - PROJECT 1: Personal Blog (EC2 + RDS + S3 + IAM Role) <br> - Write Week 6 Worklog                                                                                                                                                 | 29/05/2026 | 29/05/2026 | [rules.fcjuni.com/3-project](https://rules.fcjuni.com/3-project)                    |
 
 
 ### Week 6 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **Database Fundamentals:** Clearly distinguished Multi-AZ (HA) vs Read Replica (performance), understood the Aurora Serverless v2 mechanism, RDS instance running AVAILABLE, connected successfully from EC2, and CRUD queries working.
+* **RDS Practice:** RDS MySQL db.t3.micro running in a private subnet, application successfully connected to RDS from EC2, snapshot restore tested OK, and Multi-AZ failover tested successfully. Completed Lab 000005.
+* **Database Migration Service:** Successfully migrated MSSQL → Aurora MySQL, Schema Conversion Tool ran correctly, and clearly understood Full Load vs CDC migration mode. Completed Lab 000043.
+* **PROJECT 1 (Personal Blog):** Blog website accessible via public IP, media stored on S3 and data stored in RDS, IAM Role correctly applied (no Access Key used), and full demo screenshots captured.
+* **Summary:** PROJECT 1 completed and successfully demoed, Project 1 documentation completed. Module 6 fully completed (2/2 labs). Completed the Week 6 Worklog.

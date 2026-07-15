@@ -1,57 +1,31 @@
 ---
 title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-06-26
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Light reference learning only (look things up when needed), focused on finishing the API/Frontend and integrating all layers of the Genzite Project.
+* Build a complete REST API layer for CMS and AI generation, and connect it to the React/TypeScript Frontend.
+* Integrate Networking (VPC/Security Group) and run full end-to-end integration tests across the whole system.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to be implemented this week:
+| Day | Task                                                                                                                                                                                                                                                                                                                                                               | Start Date | End Date   | References                                                                                                                                                                 |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mon | **GENZITE:** <br> - Build/finalize the API layer (REST API NestJS controllers) <br> - Fully define endpoints for CMS + AI generation (GET/POST/PUT/DELETE) <br> **QUICK REFERENCE (as needed):** <br> - API design best practices – 10-15 min <br> **LABS & NOTES:** <br> - Reference: 000022.awsstudygroup.com                                                    | 22/06/2026 | 22/06/2026 | [000022.awsstudygroup.com](https://000022.awsstudygroup.com)                                                                                                               |
+| Tue | **GENZITE:** <br> - Finalize the Frontend (React/TypeScript) calling the API <br> - Connect Frontend ↔ API layer (CMS editor + AI generation UI) <br> **LABS & NOTES:** <br> - Reference: cloudjourney.awsstudygroup.com                                                                                                                                           | 23/06/2026 | 23/06/2026 | [cloudjourney.awsstudygroup.com](https://cloudjourney.awsstudygroup.com)                                                                                                   |
+| Wed | **GENZITE:** <br> - Integrate Networking (VPC/Security Group) to secure the entire system <br> - Review Security Groups and IAM Roles across the whole architecture (ai-service, backend, database) <br> **LIGHT REFERENCE LEARNING:** <br> - Review VPC Endpoint for internal services – 20 min <br> **LABS & NOTES:** <br> - Reference: 000003.awsstudygroup.com | 24/06/2026 | 24/06/2026 | [000003.awsstudygroup.com](https://000003.awsstudygroup.com)                                                                                                               |
+| Thu | **GENZITE:** <br> - Run comprehensive integration testing across the whole system <br> - Test key use-cases: generate an AI website, edit CMS content, publish <br> - Record and fix any bugs found <br> **LABS & NOTES:** <br> - Reference: cloudjourney.awsstudygroup.com                                                                                        | 25/06/2026 | 25/06/2026 | [cloudjourney.awsstudygroup.com](https://cloudjourney.awsstudygroup.com)                                                                                                   |
+| Fri | **PRACTICE & LEARN MORE:** <br> - Review overall Genzite progress (Backend+Storage+API+Frontend) <br> - Write the Week 10 Worklog <br> - Update the Genzite Proposal (near complete) <br> - Start drafting the Workshop Documentation (FCJ Hugo template) <br> **LABS & NOTES:** <br> - github.com/thienluhoan/fcj-workshop-template <br> - Write Week 10 Worklog  | 26/06/2026 | 26/06/2026 | [github.com/thienluhoan/fcj-workshop-template](https://github.com/thienluhoan/fcj-workshop-template) <br> [rules.fcjuni.com/3-project](https://rules.fcjuni.com/3-project) |
 
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **API Layer:** API endpoints covering all core functionality, successfully tested via Postman/curl.
+* **Frontend Integration:** Frontend displaying data and calling the API successfully, basic UI covering all core functionality.
+* **Networking & Security:** All traffic correctly routed through the designated subnets/Security Groups, no clear access control gaps.
+* **Integration Testing:** System running stably end-to-end, key bugs fixed.
+* **Summary:** Genzite Project ~75% complete. Genzite Proposal 85%. Workshop documentation draft 20%. Week 10 Worklog completed.

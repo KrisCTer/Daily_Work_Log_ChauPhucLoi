@@ -1,57 +1,31 @@
 ---
 title: "Week 5 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-22
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master IAM fundamentals: Users, Groups, Roles, Policies, the Shared Responsibility Model, and the Least Privilege principle.
+* Practice IAM Roles for cross-service access, Cognito, AWS Organizations, Identity Center, KMS, and Security Hub.
+* Apply advanced access control with Resource Tags, Access Analyzer, Permission Boundaries, and Condition Keys, and use Lambda for EC2 cost optimization.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to be implemented this week:
+| Day | Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Start Date | End Date   | References                                                                                                                                                                                                              |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mon | **FCJ BOOTCAMP VIDEOS:** <br> - Module 05-01: Shared Responsibility Model (#150, 14:13) <br> - Module 05-02: Amazon IAM (#151, 32:46) – Users, Groups, Roles, Policies, STS <br> **PRACTICE & LEARN MORE:** <br> - Learn about IAM: Users, Groups, Roles, Policies <br> - Least Privilege Principle <br> - Lab: create an IAM User for a developer (S3 read-only) <br> - Create IAM Groups 'Developers' and 'Admins' <br> **LABS & NOTES:** <br> - Lab 000002: AWS IAM Access Control <br> - Notes: Shared Responsibility, ARN format, Policy JSON structure                                                                                                                                                                     | 18/05/2026 | 18/05/2026 | [000002.awsstudygroup.com](https://000002.awsstudygroup.com) <br> playlist #150-151                                                                                                                                     |
+| Tue | **FCJ BOOTCAMP VIDEOS:** <br> - Module 05-03: Amazon Cognito (#152, 9:14) <br> - Module 05-04: AWS Organization (#153, 8:04) <br> - Module 05-05: AWS Identity Center (#154, 6:42) <br> - Module 05-06: Amazon KMS (#155, 5:47) <br> - Module 05-07: AWS Security Hub (#156, 4:29) <br> **PRACTICE & LEARN MORE:** <br> - Learn about IAM Role: EC2 role, Lambda role, Cross-account <br> - Lab: create an IAM Role for EC2 to access S3 (no Access Key needed) <br> - Enable MFA for the root account and IAM users <br> **LABS & NOTES:** <br> - Lab 000048: Granting authorization for an application to access AWS services with an IAM role <br> - Lab 000012: Using AWS IAM Identity Center for Robust Identity Management | 19/05/2026 | 19/05/2026 | [000048.awsstudygroup.com](https://000048.awsstudygroup.com) <br> [000012.awsstudygroup.com](https://000012.awsstudygroup.com) <br> playlist #152-157                                                                   |
+| Wed | **FCJ BOOTCAMP VIDEOS:** <br> - Lab28-2.1: Create IAM user (#177, 2:17) <br> - Lab28-3: Create IAM Policy (#178, 5:05) <br> - Lab28-4: Create IAM Role (#179, 2:49) <br> - Lab28-5.1→5.2.5: Switch Roles + test tag-based access (#180-185) <br> - Lab28-6: Clean up (#186) <br> **PRACTICE & LEARN MORE:** <br> - Learn about Resource Tags & Resource Groups <br> - Tag EC2/S3 resources, write Policy JSON using tag-based Conditions <br> - Lab: IAM Access Analyzer – detect public resources <br> **LABS & NOTES:** <br> - Lab 000027: Manage Resources Using Tags and Resource Groups <br> - Lab 000028: Manage Access to EC2 Services with Resource Tags through IAM Services                                            | 20/05/2026 | 20/05/2026 | [000027.awsstudygroup.com](https://000027.awsstudygroup.com) <br> [000028.awsstudygroup.com](https://000028.awsstudygroup.com) <br> playlist #177-186                                                                   |
+| Thu | **FCJ BOOTCAMP VIDEOS:** <br> - Lab44-2→5: IAM Group, Users, Admin Role, Switch Role by IP/Time (#202-209) <br> - Lab30-3→6: Restriction Policy, IAM Limited User, Test limits (#187-190) <br> **PRACTICE & LEARN MORE:** <br> - Learn about IAM Role & Condition Key, practice conditional Switch Role (IP/Time) <br> - Learn about IAM Permission Boundary, test user permission limits <br> - Lab33: KMS + CloudTrail + Athena – encrypt an S3 object with KMS <br> **LABS & NOTES:** <br> - Lab 000044: IAM Role & Condition <br> - Lab 000030: Limitation of User Rights with IAM Permission Boundary <br> - Lab 000033: Encrypt at rest with AWS KMS                                                                       | 21/05/2026 | 21/05/2026 | [000044.awsstudygroup.com](https://000044.awsstudygroup.com) <br> [000030.awsstudygroup.com](https://000030.awsstudygroup.com) <br> [000033.awsstudygroup.com](https://000033.awsstudygroup.com) <br> playlist #187-209 |
+| Fri | **FCJ BOOTCAMP VIDEOS:** <br> - Lab18-02→04: Enable Security Hub, Score criteria (#158-160) <br> - Lab22-2.1→7: Lambda auto Stop/Start EC2 via Slack webhook (#161-170) <br> **PRACTICE & LEARN MORE:** <br> - Enable Security Hub, review findings/score <br> - Lambda automatically stops/starts EC2 on a schedule to save cost <br> - Write the Week 5 Worklog – summarize Module 5 (IAM & Security) <br> **LABS & NOTES:** <br> - Lab 000018: Getting Started with AWS Security Hub <br> - Lab 000022: Optimizing EC2 Costs with Lambda <br> - Write Week 5 Worklog                                                                                                                                                          | 22/05/2026 | 22/05/2026 | [000018.awsstudygroup.com](https://000018.awsstudygroup.com) <br> [000022.awsstudygroup.com](https://000022.awsstudygroup.com) <br> playlist #158-170 <br> [rules.fcjuni.com](https://rules.fcjuni.com)                 |
 
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **IAM Fundamentals:** Clearly understood the Shared Responsibility Model, Policy JSON structure (Effect/Action/Resource), and ARN format. Successfully created an IAM User with correct permissions; confirmed the developer could not delete EC2. Completed Lab 000002.
+* **IAM Roles & Identity Services:** Distinguished Cognito User Pool vs Identity Pool, understood AWS Organizations & SCP. EC2 successfully accessed S3 using an IAM Role, MFA enabled for the root account, Identity Center SSO configured successfully. Completed Lab 000048 and Lab 000012.
+* **Resource Tags & Access Analysis:** Successfully created IAM User, Group, Role, and Policy. Switch Role worked correctly across regions, Resource Groups filtered correctly by tag, IAM Policy successfully restricted access by tag, and Access Analyzer detected a public S3 bucket. Completed Lab 000027 and Lab 000028.
+* **Condition Keys, Permission Boundary & KMS:** IAM Role with Condition worked correctly, Switch Role was blocked outside allowed hours/IP, Permission Boundary correctly blocked out-of-scope actions, and S3 objects were successfully encrypted with KMS. Completed Lab 000044, Lab 000030, and Lab 000033.
+* **Security Hub & Cost Optimization:** Security Hub displaying findings/score, Lambda automatically stopping/starting EC2 on schedule. Completed Lab 000018 and Lab 000022. Module 5 fully completed (10/10 labs). Completed the Week 5 Worklog.

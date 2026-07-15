@@ -1,57 +1,31 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-01
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand VPC fundamentals: CIDR, Public/Private Subnet, Availability Zone, Internet Gateway, NAT Gateway, Route Table.
+* Build a custom VPC with multi-AZ subnets, distinguish Security Group (stateful) vs NACL (stateless), and learn VPN/Direct Connect/Load Balancer use-cases.
+* Set up Hybrid DNS with Route 53 Resolver, configure VPC Peering and Transit Gateway, and use Session Manager for secure, keyless EC2 access.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to be implemented this week:
+| Day | Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Start Date | End Date   | References                                                                                                                                                                                                                                                                                                                         |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mon | **FCJ BOOTCAMP VIDEOS:**<br>&emsp; - Module 02-01: AWS Virtual Private Cloud (#25, 38:03) – comprehensive VPC theory<br>**PRACTICE & LEARN MORE:**<br>&emsp; - Learn about VPC: CIDR, Public/Private Subnet, Availability Zone<br>&emsp; - Learn about Internet Gateway, NAT Gateway, Route Table<br>&emsp; - Draw a 2-tier VPC diagram (Public subnet EC2 + Private subnet RDS)<br>**LABS & NOTES:**<br>&emsp; - Notes: CIDR notation, Public/Private subnet, Route Table<br>&emsp; - Draw the 2-tier VPC diagram on draw.io                                                                                                 | 27/04/2026 | 27/04/2026 | [youtube.com playlist #25](https://youtube.com) <br> [000003.awsstudygroup.com](https://000003.awsstudygroup.com)                                                                                                                                                                                                                  |
+| Tue | **FCJ BOOTCAMP VIDEOS:**<br>&emsp; - Module 02-02: VPC Security and Multi-VPC features (#26, 28:35)<br>&emsp; - Module 02-03: VPN - DirectConnect - LoadBalancer (#27, 23:44)<br>**PRACTICE & LEARN MORE:**<br>&emsp; - Lab: create a custom VPC (10.0.0.0/16)<br>&emsp; - Create 2 public subnets + 2 private subnets (multi-AZ)<br>&emsp; - Attach an IGW, create a NAT Gateway<br>&emsp; - Configure the correct Route Tables for each subnet<br>**LABS & NOTES:**<br>&emsp; - Notes: Security Group (stateful) vs NACL (stateless), VPC Peering, TGW<br>&emsp; - Lab 000003: Amazon VPC and AWS Site-to-Site VPN Workshop | 28/04/2026 | 28/04/2026 | [youtube.com playlist #26-27, #28-44](https://youtube.com) <br> [000003.awsstudygroup.com](https://000003.awsstudygroup.com) <br> [000092.awsstudygroup.com](https://000092.awsstudygroup.com) <br> [000074.awsstudygroup.com](https://000074.awsstudygroup.com) <br> [000006.awsstudygroup.com](https://000006.awsstudygroup.com) |
+| Wed | **FCJ BOOTCAMP VIDEOS:**<br>&emsp; - Module 02-Lab10-01→06: Hybrid DNS with Route 53 Resolver (#45-55)<br>**PRACTICE & LEARN MORE:**<br>&emsp; - Learn about Route 53: hosted zone, record types, resolver<br>&emsp; - Configure Inbound/Outbound Resolver Endpoint<br>&emsp; - Test DNS resolution between on-prem (simulated) and AWS<br>**LABS & NOTES:**<br>&emsp; - Lab 000010: Set up Hybrid DNS with Route 53 Resolver<br>&emsp; - Notes: on-prem DNS resolution via Route 53 Inbound/Outbound Endpoint                                                                                                                | 29/04/2026 | 29/04/2026 | [000010.awsstudygroup.com](https://000010.awsstudygroup.com) <br> playlist #45-55                                                                                                                                                                                                                                                  |
+| Thu | **FCJ BOOTCAMP VIDEOS:**<br>&emsp; - Lab19-01→07: Set up VPC Peering (#56-64) – create peering, configure routes, test ping<br>&emsp; - Module 02-Lab20-01→07: AWS Transit Gateway (#65-71)<br>**PRACTICE & LEARN MORE:**<br>&emsp; - Learn about VPC Peering: use-cases, routing, DNS resolution, non-transitive limitation<br>&emsp; - Create a Peering Connection between 2 VPCs, configure the Route Table<br>&emsp; - Learn about Transit Gateway: hub-spoke topology, compare with VPC Peering<br>**LABS & NOTES:**<br>&emsp; - Lab 000019: Setting up VPC Peering<br>&emsp; - Lab 000020: Set up AWS Transit Gateway   | 30/04/2026 | 30/04/2026 | [000019.awsstudygroup.com](https://000019.awsstudygroup.com) <br> [000020.awsstudygroup.com](https://000020.awsstudygroup.com) <br> playlist #56-71                                                                                                                                                                                |
+| Fri | **PRACTICE & LEARN MORE:**<br>&emsp; - Lab: Session Manager – SSH into EC2 without a key pair, without opening port 22<br>&emsp; - VPC Endpoint for SSM (no NAT Gateway needed for SSM traffic)<br>&emsp; - Design a combined Networking diagram (VPC + Peering + TGW + DNS)<br>&emsp; - Write the Week 2 Worklog – review NAT Gateway/TGW cost<br>&emsp; - Optimization: delete unused NAT Gateways (save ~$32/month)<br>**LABS & NOTES:**<br>&emsp; - Lab 000058: Work with AWS Systems Manager – Session Manager<br>&emsp; - Write Week 2 Worklog<br>&emsp; - Cleanup: delete unneeded NAT Gateways                        | 01/05/2026 | 01/05/2026 | [000058.awsstudygroup.com](https://000058.awsstudygroup.com) <br> [rules.fcjuni.com](https://rules.fcjuni.com)                                                                                                                                                                                                                     |
 
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **VPC Fundamentals:** Understood CIDR notation (/16, /24, /28), clearly distinguished Public vs Private subnet, and completed a full 2-tier VPC diagram.
+* **Custom VPC & Security:** Built a custom VPC (10.0.0.0/16) with 2 public + 2 private subnets across multiple AZs; attached IGW, created a NAT Gateway, and configured Route Tables correctly. Clearly distinguished Security Group (stateful) vs NACL (stateless); private-subnet EC2 successfully pinged the internet via NAT. Completed Lab 000003.
+* **Hybrid DNS:** Set up Hybrid DNS with Route 53 Resolver, correctly configured Inbound/Outbound Resolver Endpoints. Completed Lab 000010.
+* **VPC Peering & Transit Gateway:** Established an ACTIVE VPC Peering connection with successful cross-VPC ping, and understood its non-transitive limitation. Connected 3 VPCs via Transit Gateway and understood the hub-spoke topology. Completed Lab 000019 and Lab 000020.
+* **Session Manager & Cost:** Successfully SSH'd into EC2 via Session Manager with port 22 closed. Completed Lab 000058. Module 2 fully completed (5/5 labs). Learned how to reduce NAT Gateway cost, and completed the Week 2 Worklog.
