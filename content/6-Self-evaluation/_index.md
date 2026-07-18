@@ -1,13 +1,13 @@
 ---
 title: "Self-Assessment"
-date: 2024-01-01
+date: 2026-07-01
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
 
-During my internship at **Amazon Web Services Viet Nam Company Limited** from **April 20, 2026** to **July 10, 2026**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
+During my internship at **Amazon Web Services Viet Nam Company Limited** from **April 17, 2026** to **July 30, 2026**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
 I participated in **the genzite project and AWS labs**, through which I improved my skills in **programming, analysis, report writing, and communication**.  
 
 In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
