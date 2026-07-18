@@ -1,4 +1,4 @@
----
+﻿---
 title: "Week 9 Worklog"
 date: 2026-06-19
 weight: 9
@@ -8,24 +8,22 @@ pre: " <b> 1.9. </b> "
 
 ### Week 9 Objectives:
 
-* Light reference learning only (as needed), focused on building the Backend layer (NestJS modules) and Storage layer (S3) for the Genzite Project.
-* Deploy the Backend to ECS Fargate with a properly scoped IAM Role for S3/RDS/Secrets Manager access.
-* Connect Backend ↔ Database ↔ S3 into a complete end-to-end flow with basic test coverage.
+* Complete all backend microservices (data-service, site-service, media-service, notification-service) and reach 100% unit test coverage.
+* Stabilize the development environment (dev runner, Kafka consumers, clean migrations).
+* Kick off the E-commerce architecture (SaaS Billing, PayOS) and the real AI Generation pipeline via the Stitch SDK.
 
-### Tasks to be implemented this week:
-| Day | Task                                                                                                                                                                                                                                                                                                                                                                    | Start Date | End Date   | References                                                               |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ------------------------------------------------------------------------ |
-| Mon | **GENZITE:** <br> - Build/finalize the Backend layer (NestJS modular monolith) for the core CMS domains <br> - Write/refactor CRUD logic for the dynamic CMS (JSONB storage per the agreed guardrail) <br> **LIGHT REFERENCE LEARNING (as needed):** <br> - EC2/ECS service scaling – 20-30 min <br> **LABS & NOTES:** <br> - Reference: cloudjourney.awsstudygroup.com | 15/06/2026 | 15/06/2026 | [cloudjourney.awsstudygroup.com](https://cloudjourney.awsstudygroup.com) |
-| Tue | **GENZITE:** <br> - Deploy the Backend (NestJS modules) to AWS (ECS Fargate) <br> - Configure the IAM Role for the ECS task to access S3/RDS/Secrets Manager <br> **LIGHT REFERENCE LEARNING:** <br> - Review IAM Role for ECS tasks – 20 min <br> **LABS & NOTES:** <br> - Reference: 000048.awsstudygroup.com                                                         | 16/06/2026 | 16/06/2026 | [000048.awsstudygroup.com](https://000048.awsstudygroup.com)             |
-| Wed | **GENZITE:** <br> - Deploy the Storage layer – an S3 bucket for the project's media/files (AI-generated images, website assets) <br> - Configure bucket policy and lifecycle rules <br> **LIGHT REFERENCE LEARNING:** <br> - Review S3 storage classes & lifecycle – 20 min <br> **LABS & NOTES:** <br> - Reference: 000057.awsstudygroup.com                           | 17/06/2026 | 17/06/2026 | [000057.awsstudygroup.com](https://000057.awsstudygroup.com)             |
-| Thu | **GENZITE:** <br> - Connect Backend ↔ Database (Prisma/RDS) ↔ S3 into an end-to-end flow <br> - Test the full flow: request → backend → database/S3 → response <br> - Write basic test cases (happy path + 1-2 edge cases) for the generation flow and the CMS flow <br> **LABS & NOTES:** <br> - Reference: cloudjourney.awsstudygroup.com                             | 18/06/2026 | 18/06/2026 | [cloudjourney.awsstudygroup.com](https://cloudjourney.awsstudygroup.com) |
-| Fri | **PRACTICE & LEARN MORE:** <br> - Review & debug the Backend/Storage layer <br> - Write the Week 9 Worklog <br> - Update the Capstone Proposal (Backend + Storage details) <br> - Capture demo screenshots of Week 9 progress <br> **LABS & NOTES:** <br> - Write Week 9 Worklog                                                                                        | 19/06/2026 | 19/06/2026 | [rules.fcjuni.com/3-project](https://rules.fcjuni.com/3-project)         |
-
+### Tasks completed this week:
+| Day | Task | Start Date | End Date | References |
+| --- | ---- | ---------- | -------- | ---------- |
+| Mon | **Data & Site Service:** <br> - Implemented data-service and Kafka events <br> - Built the canvas builder backend for site-service <br> - Expanded the AI service with agents, MCP integration, BullMQ workers, and pipeline refinement | 15/06/2026 | 15/06/2026 |  |
+| Tue | **Backend Completion & Testing:** <br> - Implemented media upload and notification services <br> - Stabilized the project build across shared-ui generation, Prisma client isolation, and syntax fixes <br> - Completed all 6 microservices and the gateway, enabled real JWT validation, and achieved 100% unit test coverage | 16/06/2026 | 16/06/2026 |  |
+| Wed | **Dev Environment Stabilization:** <br> - Reset Prisma migrations to a clean state across 6 services <br> - Added a concurrently script to start all services together <br> - Fixed Kafka consumer group configuration and updated docker-compose | 17/06/2026 | 17/06/2026 |  |
+| Thu | **E-commerce Architecture:** <br> - Added commerce-service with PayOS integration <br> - Refactored the React app into a scalable architecture <br> - Upgraded AI generation with Groq + RAG and implemented SaaS Billing and webhook security for identity-service | 18/06/2026 | 18/06/2026 |  |
+| Fri | **AI Generation UI & Stitch SDK:** <br> - Refined the AI Generate page UI through multiple rounds of iteration <br> - Integrated the Stitch SDK (Google) and Groq Llama 3 for automated site generation <br> - Added job-polling endpoints, HTML/image preview support on the Canvas, and MCP tool registry support across AI clients | 19/06/2026 | 19/06/2026 |  |
 
 ### Week 9 Achievements:
 
-* **Backend Layer:** Backend service running locally/dev, CMS CRUD logic working correctly according to the JSONB-only guardrail.
-* **Backend Deployment:** Backend successfully deployed on AWS (ECS Fargate), IAM Role correctly applying the least-privilege principle.
-* **Storage Layer:** S3 bucket working with correct permissions, lifecycle policy set for cost optimization.
-* **End-to-End Integration:** Backend + Database + S3 end-to-end flow working correctly, test cases passing.
-* **Summary:** Backend + Storage layer stable and demo-ready. Capstone Proposal at 60%. Week 9 Worklog completed.
+* **Complete Backend:** All 6 microservices (identity, notification, site, data, media, ai) and the Gateway were completed, with 100% unit test coverage and real JWT validation in place.
+* **Stable Dev Environment:** The dev runner now starts all services concurrently, Kafka consumers work correctly, and Prisma migrations are clean across services.
+* **E-commerce Architecture:** The commerce-service was kicked off with PayOS integration and SaaS Billing with webhook security.
+* **AI Generation Pipeline:** The Stitch SDK and Groq Llama 3 were successfully integrated for automated site generation, supporting previews on the Canvas and standardized MCP tool usage aligned with the Genzite Design System.

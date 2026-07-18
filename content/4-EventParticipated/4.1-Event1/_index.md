@@ -1,5 +1,5 @@
 ---
-title: "Event 1"
+title: "Event 1 - FCAJ Community Day - May 23"
 date: 2026-05-23
 weight: 1
 chapter: false
@@ -116,6 +116,6 @@ Participating in **FCAJ Community Day - May 23** gave me a deeper understanding 
 
 #### Some Event Photos
 
-![23-5.png](/images/4-EventParticipated/23-5.png)
+![Event 1](/images/4-EventParticipated/4.1-Event1/Event1.jpg)
 
 > Overall, the event provided valuable insights into AI and Cloud technologies while offering practical knowledge that I can apply to my studies, software projects, and future career development.
