@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://kriscter.github.io/Daily_Work_Log_ChauPhucLoi/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
