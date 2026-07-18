@@ -1,4 +1,4 @@
----
+﻿---
 title: "Week 11 Worklog"
 date: 2026-07-03
 weight: 11
@@ -8,24 +8,23 @@ pre: " <b> 1.11. </b> "
 
 ### Week 11 Objectives:
 
-* Light reference learning only (only when stuck), focused on finalizing the Genzite Project: Monitoring, basic security (WAF/Secrets Manager/Security Hub), and Workshop Documentation.
-* Add advanced Monitoring (CloudWatch Dashboard + Alarms) and review basic security (IAM least privilege, KMS encryption, Security Hub).
-* Optimize costs, write the bilingual Workshop Documentation, and draft the Self-evaluation, bringing Genzite to ~95% complete.
+* Finalize the admin UI and Canvas Builder with real generation metrics, persisting action history to the database.
+* Integrate Cognito login and image upload via the Media service (S3), and standardize the UI architecture to English.
+* Remove the unneeded commerce-service, set up production CI/CD, and enforce strict TypeScript across the monorepo.
 
-### Tasks to be implemented this week:
-| Day | Task                                                                                                                                                                                                                                                                                                                                                                                                          | Start Date | End Date   | References                                                                                                                                                                 |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mon | **REFERENCE LEARNING (as needed):** <br> - AWS WAF: web ACL, rules, managed rule groups <br> **GENZITE:** <br> - Add Monitoring to the system – advanced CloudWatch Dashboard + Alarms <br> - Track key metrics (CPU, error rate, BullMQ queue depth, Gemini API latency) <br> - Consider attaching WAF to the ALB in front of the Frontend <br> **LABS & NOTES:** <br> - Reference: 000008.awsstudygroup.com | 29/06/2026 | 29/06/2026 | [000008.awsstudygroup.com](https://000008.awsstudygroup.com)                                                                                                               |
-| Tue | **REFERENCE LEARNING (as needed):** <br> - Security Hub findings, GuardDuty threat detection <br> **GENZITE:** <br> - Basic security review – IAM least privilege, encrypt sensitive data (KMS) <br> - Re-check Security Hub/Permission Boundary applied since Module 5 <br> **LABS & NOTES:** <br> - Reference: 000033.awsstudygroup.com, 000018.awsstudygroup.com                                           | 30/06/2026 | 30/06/2026 | [000033.awsstudygroup.com](https://000033.awsstudygroup.com) <br> [000018.awsstudygroup.com](https://000018.awsstudygroup.com)                                             |
-| Wed | **GENZITE:** <br> - Cost optimization – review running resources (ECS task, RDS, ElastiCache), delete/resize unneeded resources <br> - Check Cost Explorer, ensure spending stays within budget <br> **LIGHT REFERENCE LEARNING:** <br> - Review Cost Optimization (Savings Plans, Right-sizing) – 20 min <br> **LABS & NOTES:** <br> - Reference: 000064.awsstudygroup.com                                   | 01/07/2026 | 01/07/2026 | [000064.awsstudygroup.com](https://000064.awsstudygroup.com) <br> [rules.fcjuni.com](https://rules.fcjuni.com)                                                             |
-| Thu | **PRACTICE & LEARN MORE:** <br> - Write the Workshop Documentation (bilingual VI/EN) using the FCJ template <br> - Add Genzite architecture diagrams, code snippets (NestJS modules, Prisma transaction fix, BullMQ flow), and detailed deployment steps <br> **GENZITE:** <br> - Final end-to-end testing, capture demo screenshots <br> **LABS & NOTES:** <br> - workshop-sample.fcjuni.com                 | 02/07/2026 | 02/07/2026 | [workshop-sample.fcjuni.com](https://workshop-sample.fcjuni.com) <br> [github.com/thienluhoan/fcj-workshop-template](https://github.com/thienluhoan/fcj-workshop-template) |
-| Fri | **PRACTICE & LEARN MORE:** <br> - Finalize the Workshop Documentation to 90% <br> - Write the Week 11 Worklog <br> - Write the Self-evaluation (8 FCJ criteria) – draft <br> - Genzite Project overall progress ~95% <br> **LABS & NOTES:** <br> - Write Week 11 Worklog                                                                                                                                      | 03/07/2026 | 03/07/2026 | [rules.fcjuni.com/3-project](https://rules.fcjuni.com/3-project)                                                                                                           |
-
+### Tasks completed this week:
+| Day | Task | Start Date | End Date | References |
+| --- | ---- | ---------- | -------- | ---------- |
+| Mon | **Admin UI:** <br> - Adjusted the admin-identity-profile-notification UI | 29/06/2026 | 29/06/2026 |  |
+| Tue | **Canvas & Builder Finalization:** <br> - Continued the Canvas refactor by persisting real generation metrics, dynamic action history, removing mock descriptions, and storing prompts in the DB <br> - Updated the Canvas Builder UI and improved the Login/Home/Dashboard layout <br> - Resolved EditViewer.tsx merge conflicts and enforced an English UI modular architecture | 30/06/2026 | 30/06/2026 |  |
+| Wed | **Cognito & S3 Integration:** <br> - Implemented Cognito login, image upload through the Media service, profile picture editing, and login bug fixes | 01/07/2026 | 01/07/2026 |  |
+| Thu | **Cognito Finalization & i18n Standardization:** <br> - Resolved EditViewer.tsx conflicts, introduced a glowing prompt-improvement UI with fallback timeouts, implemented the Component-Driven Generation architecture, refined CanvasWorkspace and real-time View Details metrics, and added a deep recursive regex scanner for nested image URLs in widgets <br> - Translated hardcoded Vietnamese strings to English and cleaned up dead AI files <br> - Finalized Cognito + S3 integration, fixed the default VIEWER role on SSO registration, adjusted the assigned UI sections, and fixed notification/change-password issues | 02/07/2026 | 02/07/2026 |  |
+| Fri | **Cleanup & Production CI/CD:** <br> - Removed the unused commerce-service, cleaned up related dead code across frontend and backend, updated architecture docs to the finalized 6-service model, created a centralized infra/Dockerfile.prod optimized for pnpm workspaces, implemented GitHub Actions for ECS deployment (backend) and Vercel deployment (frontend), and updated the Production Deployment guide <br> - Enforced strict TypeScript rules monorepo-wide, created shared RequestWithUser/AuthUser interfaces, and fixed implicit-any issues in ai.consumer.ts and site-generator.service.ts | 03/07/2026 | 03/07/2026 |  |
 
 ### Week 11 Achievements:
 
-* **Monitoring:** Full CloudWatch Dashboard monitoring the Genzite Project, alarms triggering on errors/high load, and clear understanding of how WAF blocks malicious requests.
-* **Security:** Basic security checklist completed, sensitive data encrypted (KMS) where needed, Security Hub scan no longer showing critical findings.
-* **Cost Optimization:** Genzite costs kept under control, unneeded resources cleaned up.
-* **Workshop Documentation:** Documentation 70% complete after Thursday (VI+EN), full set of demo screenshots for all key steps; finalized to 90% by Friday.
-* **Summary:** Self-evaluation draft completed. **Genzite Project overall progress ~95% complete**. Week 11 Worklog completed.
+* **Canvas Builder Finalized:** Real-time generation metrics were persisted correctly, dynamic action history replaced mock data, and prompts were stored in the DB for traceability.
+* **Cognito Authentication & Media:** Login via Amazon Cognito worked stably, profile picture upload/editing through the Media service (S3) worked correctly, and the default VIEWER role was correctly applied on SSO registration.
+* **Codebase Standardization:** All hardcoded Vietnamese strings were translated to English, and the UI architecture was modularized according to the English standard.
+* **Simplified Architecture:** The unused commerce-service was fully removed, and the architecture docs were updated to the correct 6-service model.
+* **CI/CD & Code Quality:** Automated CI/CD was successfully set up (GitHub Actions for backend ECS deployment and Vercel frontend deployment), the codebase now meets strict TypeScript standards (including noImplicitAny), and a production Dockerfile optimized for pnpm workspaces was created.

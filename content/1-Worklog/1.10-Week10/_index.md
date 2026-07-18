@@ -1,4 +1,4 @@
----
+﻿---
 title: "Week 10 Worklog"
 date: 2026-06-26
 weight: 10
@@ -8,24 +8,23 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 Objectives:
 
-* Light reference learning only (look things up when needed), focused on finishing the API/Frontend and integrating all layers of the Genzite Project.
-* Build a complete REST API layer for CMS and AI generation, and connect it to the React/TypeScript Frontend.
-* Integrate Networking (VPC/Security Group) and run full end-to-end integration tests across the whole system.
+* Upgrade the AI Generation pipeline to a Hybrid Parallel architecture (Stitch + LLM running concurrently) and redesign the Home/AI Canvas/Features UI.
+* Restore and stabilize the login flow, complete the identity service with real email integration.
+* Complete the full authentication flow (refresh token, forgot/reset password, RBAC) and refactor the Canvas Builder UI.
 
-### Tasks to be implemented this week:
-| Day | Task                                                                                                                                                                                                                                                                                                                                                               | Start Date | End Date   | References                                                                                                                                                                 |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mon | **GENZITE:** <br> - Build/finalize the API layer (REST API NestJS controllers) <br> - Fully define endpoints for CMS + AI generation (GET/POST/PUT/DELETE) <br> **QUICK REFERENCE (as needed):** <br> - API design best practices – 10-15 min <br> **LABS & NOTES:** <br> - Reference: 000022.awsstudygroup.com                                                    | 22/06/2026 | 22/06/2026 | [000022.awsstudygroup.com](https://000022.awsstudygroup.com)                                                                                                               |
-| Tue | **GENZITE:** <br> - Finalize the Frontend (React/TypeScript) calling the API <br> - Connect Frontend ↔ API layer (CMS editor + AI generation UI) <br> **LABS & NOTES:** <br> - Reference: cloudjourney.awsstudygroup.com                                                                                                                                           | 23/06/2026 | 23/06/2026 | [cloudjourney.awsstudygroup.com](https://cloudjourney.awsstudygroup.com)                                                                                                   |
-| Wed | **GENZITE:** <br> - Integrate Networking (VPC/Security Group) to secure the entire system <br> - Review Security Groups and IAM Roles across the whole architecture (ai-service, backend, database) <br> **LIGHT REFERENCE LEARNING:** <br> - Review VPC Endpoint for internal services – 20 min <br> **LABS & NOTES:** <br> - Reference: 000003.awsstudygroup.com | 24/06/2026 | 24/06/2026 | [000003.awsstudygroup.com](https://000003.awsstudygroup.com)                                                                                                               |
-| Thu | **GENZITE:** <br> - Run comprehensive integration testing across the whole system <br> - Test key use-cases: generate an AI website, edit CMS content, publish <br> - Record and fix any bugs found <br> **LABS & NOTES:** <br> - Reference: cloudjourney.awsstudygroup.com                                                                                        | 25/06/2026 | 25/06/2026 | [cloudjourney.awsstudygroup.com](https://cloudjourney.awsstudygroup.com)                                                                                                   |
-| Fri | **PRACTICE & LEARN MORE:** <br> - Review overall Genzite progress (Backend+Storage+API+Frontend) <br> - Write the Week 10 Worklog <br> - Update the Genzite Proposal (near complete) <br> - Start drafting the Workshop Documentation (FCJ Hugo template) <br> **LABS & NOTES:** <br> - github.com/thienluhoan/fcj-workshop-template <br> - Write Week 10 Worklog  | 26/06/2026 | 26/06/2026 | [github.com/thienluhoan/fcj-workshop-template](https://github.com/thienluhoan/fcj-workshop-template) <br> [rules.fcjuni.com/3-project](https://rules.fcjuni.com/3-project) |
-
+### Tasks completed this week:
+| Day | Task | Start Date | End Date | References |
+| --- | ---- | ---------- | -------- | ---------- |
+| Mon | **Hybrid UI Generation:** <br> - Continued updating the AI Generate UI and the login/user management UI <br> - Redesigned the Home, AI Canvas, and Agent Logs screens <br> - Cleaned up unused utility functions and configuration files <br> - Implemented the Hybrid Parallel UI Generation architecture with NVIDIA Llama 3.3 for widget extraction and QA, while running Stitch and LLMs in parallel | 22/06/2026 | 22/06/2026 |  |
+| Tue | **Login Restoration & PageBuilder:** <br> - Restored the previous login page and removed dead code <br> - Connected the Dashboard and UserManagement pages to real APIs <br> - Fixed the Vite dependency issue and updated the PageBuilder UI <br> - Unified Home, Features, and Contact into one page and moved navigation to the footer | 23/06/2026 | 23/06/2026 |  |
+| Wed | **Identity Service & Email:** <br> - Adjusted the login UI <br> - Completed the identity service and integrated real email sending | 24/06/2026 | 24/06/2026 |  |
+| Thu | **Auth Hardening & Canvas Refactor:** <br> - Implemented the refresh token flow, forgot/reset password, and RBAC guards <br> - Organized admin/workspace routing, synced avatars, and fixed gateway proxy issues <br> - Refactored the Canvas UI with Spotlight, Previewer, and restored AdminNotificationsPage | 25/06/2026 | 25/06/2026 |  |
+| Fri | **Continued Canvas Refactor:** <br> - Continued refactoring the Canvas Builder UI <br> - Improved the style panel, code viewer, flow export, and interaction handling <br> - Updated the live viewer routing and optimized download performance | 26/06/2026 | 26/06/2026 |  |
 
 ### Week 10 Achievements:
 
-* **API Layer:** API endpoints covering all core functionality, successfully tested via Postman/curl.
-* **Frontend Integration:** Frontend displaying data and calling the API successfully, basic UI covering all core functionality.
-* **Networking & Security:** All traffic correctly routed through the designated subnets/Security Groups, no clear access control gaps.
-* **Integration Testing:** System running stably end-to-end, key bugs fixed.
-* **Summary:** Genzite Project ~75% complete. Genzite Proposal 85%. Workshop documentation draft 20%. Week 10 Worklog completed.
+* **AI Generation Upgraded:** The AI Generation pipeline was upgraded to a Hybrid Parallel architecture with NVIDIA Llama 3.3 and Stitch running in parallel, and the Home/AI Canvas/Features UI was fully redesigned.
+* **Stable Login Flow:** The login flow was restored and fixed thoroughly, the Dashboard and UserManagement pages were connected to real APIs, and dead code was cleaned up.
+* **Identity Service Completed:** Real email sending was integrated, allowing the user authentication flow to work end-to-end.
+* **Authentication Security:** The refresh token flow, forgot/reset password, and RBAC guards were completed, and admin/workspace routes were clearly separated.
+* **Canvas Builder:** The Canvas Builder UI was refactored comprehensively, including the style panel, code viewer, export, live viewer routing, and download optimization.

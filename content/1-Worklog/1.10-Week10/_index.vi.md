@@ -1,4 +1,4 @@
----
+﻿---
 title: "Worklog Tuần 10"
 date: 2026-06-26
 weight: 10
@@ -9,24 +9,23 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-* Học nhẹ (chỉ tra cứu khi cần), tập trung hoàn thiện API/Frontend và tích hợp toàn bộ các layer của Genzite Project.
-* Xây dựng hoàn chỉnh API layer cho CMS và AI generation, kết nối với Frontend React/TypeScript.
-* Tích hợp Networking (VPC/Security Group) và test tích hợp toàn diện toàn bộ hệ thống.
+* Nâng cấp pipeline AI Generation lên kiến trúc Hybrid Parallel (Stitch + LLM chạy song song) và redesign UI Home/AI Canvas.
+* Khôi phục và ổn định luồng đăng nhập, hoàn thiện identity-service với gửi email thật.
+* Hoàn thiện luồng xác thực đầy đủ (refresh token, forgot/reset password, RBAC) và refactor UI Canvas Builder.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                                                                                                                                                                                | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                                                                                                             |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2   | **GENZITE:** <br> - Xây dựng/hoàn thiện API layer (REST API NestJS controllers) <br> - Định nghĩa đầy đủ endpoints cho CMS + AI generation (GET/POST/PUT/DELETE) <br> **TRA CỨU NHANH (khi cần):** <br> - API design best practices – 10-15 phút <br> **LAB & GHI CHÚ:** <br> - Tham khảo: 000022.awsstudygroup.com                                      | 22/06/2026   | 22/06/2026      | [000022.awsstudygroup.com](https://000022.awsstudygroup.com/)                                                                                                              |
-| 3   | **GENZITE:** <br> - Hoàn thiện Frontend (React/TypeScript) gọi API <br> - Kết nối Frontend ↔ API layer (CMS editor + AI generation UI) <br> **LAB & GHI CHÚ:** <br> - Tham khảo: cloudjourney.awsstudygroup.com                                                                                                                                          | 23/06/2026   | 23/06/2026      | [cloudjourney.awsstudygroup.com](https://cloudjourney.awsstudygroup.com/)                                                                                                  |
-| 4   | **GENZITE:** <br> - Tích hợp Networking (VPC/Security Group) đảm bảo bảo mật cho toàn hệ thống <br> - Review lại Security Group, IAM Role toàn bộ kiến trúc (ai-service, backend, database) <br> **HỌC NHẸ:** <br> - Ôn VPC Endpoint cho dịch vụ nội bộ – 20 phút <br> **LAB & GHI CHÚ:** <br> - Tham khảo: 000003.awsstudygroup.com                     | 24/06/2026   | 24/06/2026      | [000003.awsstudygroup.com](https://000003.awsstudygroup.com/)                                                                                                              |
-| 5   | **GENZITE:** <br> - Test tích hợp toàn diện (integration test) toàn bộ hệ thống <br> - Test các use-case chính: tạo website AI, chỉnh sửa CMS, publish <br> - Ghi nhận và fix bug phát sinh <br> **LAB & GHI CHÚ:** <br> - Tham khảo: cloudjourney.awsstudygroup.com                                                                                     | 25/06/2026   | 25/06/2026      | [cloudjourney.awsstudygroup.com](https://cloudjourney.awsstudygroup.com/)                                                                                                  |
-| 6   | **THỰC HÀNH & HỌC THÊM:** <br> - Review toàn bộ tiến độ Genzite (Backend+Storage+API+Frontend) <br> - Viết Worklog Tuần 10 <br> - Cập nhật Proposal Genzite (gần hoàn chỉnh) <br> - Bắt đầu phác thảo Workshop Documentation (FCJ Hugo template) <br> **LAB & GHI CHÚ:** <br> - github.com/thienluhoan/fcj-workshop-template <br> - Viết Worklog Tuần 10 | 26/06/2026   | 26/06/2026      | [github.com/thienluhoan/fcj-workshop-template](https://github.com/thienluhoan/fcj-workshop-template) <br> [rules.fcjuni.com/3-project](https://rules.fcjuni.com/3-project) |
-
+### Các công việc đã hoàn thành trong tuần này:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------ | --------------- | -------------- |
+| 2 | **Hybrid UI Generation:** <br> - Tiếp tục cập nhật UI AI Generate và UI login/user management <br> - Redesign màn hình Home, AI Canvas và Agent Logs <br> - Dọn dẹp các utility function và file cấu hình không còn sử dụng <br> - Triển khai kiến trúc Hybrid Parallel UI Generation với NVIDIA Llama 3.3 cho widget extraction và QA, đồng thời chạy Stitch và LLM song song | 22/06/2026 | 22/06/2026 |  |
+| 3 | **Khôi phục Login & PageBuilder:** <br> - Khôi phục trang login cũ và dọn bỏ dead code <br> - Kết nối các trang Dashboard và UserManagement với API thật <br> - Sửa lỗi dependency Vite và cập nhật UI PageBuilder <br> - Hợp nhất Home, Features và Contact thành một trang, chuyển navigation xuống footer | 23/06/2026 | 23/06/2026 |  |
+| 4 | **Identity Service & Email:** <br> - Chỉnh sửa giao diện login <br> - Hoàn thiện identity-service và tích hợp gửi email thật | 24/06/2026 | 24/06/2026 |  |
+| 5 | **Auth Hardening & Canvas Refactor:** <br> - Triển khai refresh token flow, forgot/reset password và RBAC guard <br> - Tổ chức routing admin/workspace, đồng bộ avatar và sửa lỗi gateway proxy <br> - Refactor UI Canvas với Spotlight, Previewer và khôi phục AdminNotificationsPage | 25/06/2026 | 25/06/2026 |  |
+| 6 | **Tiếp tục Canvas Refactor:** <br> - Tiếp tục refactor UI Canvas Builder <br> - Cải thiện style panel, code viewer, flow export và xử lý tương tác <br> - Cập nhật routing live viewer và tối ưu hiệu suất download | 26/06/2026 | 26/06/2026 |  |
 
 ### Kết quả đạt được tuần 10:
 
-* **API Layer:** API endpoints đầy đủ chức năng chính, test bằng Postman/curl thành công.
-* **Tích hợp Frontend:** Frontend hiển thị và gọi API thành công, UI cơ bản đầy đủ chức năng chính.
-* **Networking & Bảo mật:** Toàn bộ traffic đi đúng qua subnet/SG quy định, không có lỗ hổng quyền truy cập rõ ràng.
-* **Test tích hợp:** Hệ thống chạy ổn định end-to-end, các bug chính đã được fix.
-* **Tổng kết:** Genzite Project ~75% hoàn chỉnh. Proposal Genzite 85%. Workshop doc draft 20%. Hoàn thành Worklog Tuần 10.
+* **AI Generation nâng cấp:** Pipeline AI Generation được nâng cấp sang kiến trúc Hybrid Parallel với NVIDIA Llama 3.3 và Stitch chạy song song, đồng thời UI Home/AI Canvas/Features được redesign hoàn chỉnh.
+* **Luồng đăng nhập ổn định:** Luồng login được khôi phục và sửa triệt để, các trang Dashboard và UserManagement đã kết nối với API thật và dead code được làm sạch.
+* **Identity Service hoàn thiện:** Đã tích hợp gửi email thật, giúp luồng xác thực người dùng hoạt động đầy đủ từ đầu đến cuối.
+* **Bảo mật xác thực:** Hoàn thiện refresh token flow, forgot/reset password và RBAC guard, cùng việc phân tách rõ ràng route admin/workspace.
+* **Canvas Builder:** UI Canvas Builder được refactor toàn diện, bao gồm style panel, code viewer, export, live viewer routing và tối ưu download.
