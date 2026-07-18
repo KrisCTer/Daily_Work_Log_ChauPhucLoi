@@ -1,5 +1,5 @@
 baseURL = "https://kriscter.github.io/Daily_Work_Log_ChauPhucLoi/"
-relativeURLs = false
+relativeURLs = true
 canonifyURLs = false
 defaultContentLanguage = "en"
 
