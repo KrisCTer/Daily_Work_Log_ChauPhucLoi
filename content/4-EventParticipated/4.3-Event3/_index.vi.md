@@ -125,8 +125,8 @@ Tham gia **DATA DRIVEN, AI RISEN** mang lại cơ hội tiếp cận nhiều cô
 - Sự kiện đã mang lại cho tôi định hướng rõ ràng hơn trong việc nghiên cứu AWS, AI Agent và các giải pháp Cloud hiện đại để chuẩn bị cho các vai trò trong tương lai.
 
 #### Một số hình ảnh khi tham gia sự kiện
-![Event 3](/images/4-EventParticipated/4.3-Event3/Event.1.png)
-![Event 3](/images/4-EventParticipated/4.3-Event3/Event.2.png)
-![Event 3](/images/4-EventParticipated/4.3-Event3/Event.3.png)
+![Event 3](/images/4-EventParticipated/4.3-Event3/Event3.1.png)
+![Event 3](/images/4-EventParticipated/4.3-Event3/Event3.2.png)
+![Event 3](/images/4-EventParticipated/4.3-Event3/Event3.3.png)
 
 > Tổng thể, "DATA DRIVEN, AI RISEN" cung cấp một lượng lớn kiến thức thực tiễn về AI và Cloud trên nền tảng AWS. Những chia sẻ tâm huyết từ các diễn giả đã giúp tôi hiểu rõ hơn về xu hướng phát triển của AI Agent trong doanh nghiệp, cũng như định hướng rõ ràng cho lộ trình học tập và phát triển sự nghiệp trong lĩnh vực Điện toán đám mây và Trí tuệ Nhân tạo.
