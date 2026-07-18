@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.163.3">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="thienlh@thienlu.com" />
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Project Worklog :: Internship Report</title>
+
+    
+    <link href="/css/nucleus.css?1784306288" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1784306288" rel="stylesheet">
+    <link href="/css/hybrid.css?1784306288" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1784306288" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1784306288" rel="stylesheet">
+    <link href="/css/auto-complete.css?1784306288" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1784306288" rel="stylesheet">
+    <link href="/css/theme.css?1784306288" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1784306288" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1784306288" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1784306288"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="/1-worklog/1.1-week1/week_worklog_draft-copy/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1784306288"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1784306288"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1784306288"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/1-worklog/"
+  title="Worklog"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="/1-worklog/">
+     <b> 1. </b> Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/1-worklog/1.1-week1/"
+  title="Week 1 Worklog"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Week 1 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+        
+            
+<li
+  data-nav-id="/1-worklog/1.1-week1/week_worklog_draft-copy/"
+  title="Project Worklog"
+  class="dd-item active"
+>
+  <a href="/1-worklog/1.1-week1/week_worklog_draft-copy/">
+     <b> 1.1. </b> Project Worklog <i
+      class="fas fa-check read-icon"
+    ></i
+    >
+  </a>
+</li>
+     
+            
+<li
+  data-nav-id="/1-worklog/1.1-week1/week_worklog_draft/"
+  title="Project Worklog"
+  class="dd-item "
+>
+  <a href="/1-worklog/1.1-week1/week_worklog_draft/">
+     <b> 1.1. </b> Project Worklog <i
+      class="fas fa-check read-icon"
+    ></i
+    >
+  </a>
+</li>
+      
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.2-week2/"
+  title="Week 2 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Week 2 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.3-week3/"
+  title="Week 3 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Week 3 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.4-week4/"
+  title="Week 4 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Week 4 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.5-week5/"
+  title="Week 5 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Week 5 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.6-week6/"
+  title="Week 6 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Week 6 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.7-week7/"
+  title="Week 7 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Week 7 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.8-week8/"
+  title="Week 8 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Week 8 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.9-week9/"
+  title="Week 9 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Week 9 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.10-week10/"
+  title="Week 10 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Week 10 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.11-week11/"
+  title="Week 11 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.11-week11/">
+     <b> 1.11. </b> Week 11 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.12-week12/"
+  title="Week 12 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.12-week12/">
+     <b> 1.12. </b> Week 12 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/2-proposal/"
+  title="Proposal"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/2-proposal/">
+     <b> 2. </b> Proposal 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/3-blogsposted/"
+  title="Blogs Posted"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/3-blogsposted/">
+     <b> 3. </b> Blogs Posted 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/3-blogsposted/3.3-blog3/"
+  title="GPU Cost Attribution in Amazon EKS"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/3-blogsposted/3.3-blog3/">
+     <b> 3.3. </b> GPU Cost Attribution in Amazon EKS 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/3-blogsposted/3.2-blog2/"
+  title="Modernizing ML Pipelines for Agricultural Robots with Aigen"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/3-blogsposted/3.2-blog2/">
+     <b> 3.2. </b> Modernizing ML Pipelines for Agricultural Robots with Aigen 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/3-blogsposted/3.1-blog1/"
+  title="Optimizing Generative AI Video Inference"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/3-blogsposted/3.1-blog1/">
+     <b> 3.1. </b> Optimizing Generative AI Video Inference 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/4-eventparticipated/"
+  title="Events Participated"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-eventparticipated/">
+     <b> 4. </b> Events Participated 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/4-eventparticipated/4.1-event1/"
+  title="Event 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-eventparticipated/4.1-event1/">
+     <b> 4.1. </b> Event 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/4-eventparticipated/4.2-event2/"
+  title="Event 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-eventparticipated/4.2-event2/">
+     <b> 4.2. </b> Event 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/5-workshop/"
+  title="Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/">
+     <b> 5. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/5-workshop/5.1-workshop-overview/"
+  title="Introduction"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.1-workshop-overview/">
+     <b> 5.1. </b> Introduction 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.2-prerequiste/"
+  title="Prerequiste"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.2-prerequiste/">
+     <b> 5.2. </b> Prerequiste 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.3-s3-vpc/"
+  title="Access S3 from VPC"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.3-s3-vpc/">
+     <b> 5.3. </b> Access S3 from VPC 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/"
+  title="Create a gateway endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/">
+     <b> 5.3.1 </b> Create a gateway endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/"
+  title="Test the Gateway Endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/">
+     <b> 5.3.2 </b> Test the Gateway Endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.4-s3-onprem/"
+  title="Access S3 from on-premises"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.4-s3-onprem/">
+     <b> 5.4. </b> Access S3 from on-premises 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/5-workshop/5.4-s3-onprem/5.4.1-prepare/"
+  title="Prepare the environment"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.4-s3-onprem/5.4.1-prepare/">
+     <b> 5.4.1 </b> Prepare the environment 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/"
+  title="Create an S3 Interface endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/">
+     <b> 5.4.2 </b> Create an S3 Interface endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/"
+  title="Test the Interface Endpoint"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/">
+     <b> 5.4.3 </b> Test the Interface Endpoint 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/"
+  title="On-premises DNS Simulation"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/">
+     <b> 5.4.4 </b> On-premises DNS Simulation 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.5-policy/"
+  title="VPC Endpoint Policies"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.5-policy/">
+     <b> 5.5. </b> VPC Endpoint Policies 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.6-cleanup/"
+  title="Clean up"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.6-cleanup/">
+     <b> 5.6. </b> Clean up 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/6-self-evaluation/"
+  title="Self-Assessment"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/6-self-evaluation/">
+     <b> 6. </b> Self-Assessment 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/7-feedback/"
+  title="Sharing and Feedback"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/7-feedback/">
+     <b> 7. </b> Sharing and Feedback 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="https://awsstudygroup.com"
+            ><i class='fab fa-aws'></i> AWS Study Group - Blog</a
+          >
+        </li>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"
+            ><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="http://localhost:1313/1-worklog/1.1-week1/week_worklog_draft-copy/"
+                  selected
+                >
+                  English
+                </option>
+                     
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer"><left>
+    <br>
+    <br>
+    <b> Last Updated </b> <br>
+    <i>
+        <font color=orange>17-07-2026</font>
+    </i>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+    <i>
+        <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud AI Journey</a>
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Internship Report</a> > <a href='/1-worklog/'>Worklog</a> > <a href='/1-worklog/1.1-week1/'>Week 1 Worklog</a> > Project Worklog
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#project-objectives">Project Objectives:</a></li>
+        <li><a href="#tasks-to-be-implemented">Tasks to be implemented:</a></li>
+        <li><a href="#project-achievements">Project Achievements:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Project Worklog
+            </h1>
+          
+
+        
+
+
+<h3 id="project-objectives">Project Objectives:</h3>
+<ul>
+<li>[Ghi mục tiêu tổng quan của dự án tại đây]</li>
+<li>[Ví dụ: Hoàn thiện tính năng backend, viết tài liệu API hoặc test script&hellip;]</li>
+</ul>
+<h3 id="tasks-to-be-implemented">Tasks to be implemented:</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Day</th>
+					<th>Task</th>
+					<th>Start Date</th>
+					<th>End Date</th>
+					<th>References</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Thu</td>
+					<td>- Initial commit <br><br>- Potential fix for pull request finding <br> <em>Detail:</em> Co-authored-by: Copilot Autofix powered by AI <a href="mailto:175728472&#43;Copilot@users.noreply.github.com">175728472+Copilot@users.noreply.github.com</a> <br><br>- Potential fix for pull request finding <br> <em>Detail:</em> Co-authored-by: Copilot Autofix powered by AI <a href="mailto:175728472&#43;Copilot@users.noreply.github.com">175728472+Copilot@users.noreply.github.com</a> <br><br>- Potential fix for pull request finding <br> <em>Detail:</em> Co-authored-by: Copilot Autofix powered by AI <a href="mailto:175728472&#43;Copilot@users.noreply.github.com">175728472+Copilot@users.noreply.github.com</a> <br><br>- Potential fix for pull request finding <br> <em>Detail:</em> Co-authored-by: Copilot Autofix powered by AI <a href="mailto:175728472&#43;Copilot@users.noreply.github.com">175728472+Copilot@users.noreply.github.com</a></td>
+					<td>11/06/2026</td>
+					<td>11/06/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Sat</td>
+					<td>- Merge pull request #2 from KrisCTer/feat/project-setup <br> <em>Detail:</em> chore: init Genzite monorepo architecture and system specs <br><br>- Merge pull request #3 from KrisCTer/feat/project-setup <br> <em>Detail:</em> feat: scaffold microservices architecture with 7 services + shared packages</td>
+					<td>13/06/2026</td>
+					<td>13/06/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Tue</td>
+					<td>- Merge pull request #4 from KrisCTer/feat/project-setup <br> <em>Detail:</em> feat: integrate AG Kit AI agent framework for team-wide development workflow</td>
+					<td>16/06/2026</td>
+					<td>16/06/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Fri</td>
+					<td>- Merge pull request #5 from KrisCTer/feat/shared-ui <br> <em>Detail:</em> feat(shared-ui): initialize shared component library and integrate with frontend</td>
+					<td>19/06/2026</td>
+					<td>19/06/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Sun</td>
+					<td>- chore(core): update architecture docs, infra configs, and shared packages (#6) <br><br>- feat(db): integrate Prisma ORM across all microservices (#7) <br> <em>Detail:</em> * chore(core): update architecture docs, infra configs, and shared packages <br>  <br> * feat(db): integrate Prisma ORM across all microservices <br><br>- feat(api): implement API gateway proxy, auth middleware, and validation DTOs (#8) <br> <em>Detail:</em> * chore(core): update architecture docs, infra configs, and shared packages <br>  <br> * feat(db): integrate Prisma ORM across all microservices <br>  <br> * feat(api): implement API gateway proxy, auth middleware, and validation DTOs <br><br>- chore(docs): translate architecture docs to English and enforce AI coding rules (#9) <br> <em>Detail:</em> - Translate <code>DEVELOPMENT.md</code> and <code>README.md</code> to English. <br> - Translate <code>microservices-architecture.md</code> and <code>product-spec.md</code> to English. <br> - Clean up unused <code>update-architecture.md</code> file. <br> - Update <code>.ai/01-architecture.md</code> with <strong>Global Language Rule</strong> (English strictly enforced). <br> - Update <code>.ai/03-frontend-rules.md</code> with <strong>Icon Standards</strong> (Only <code>lucide-react</code> permitted). <br><br>- feat(core): implement Kafka event bus and @genzite/kafka module (#10) <br> <em>Detail:</em> - Create new internal package <code>@genzite/kafka</code> for microservices communication <br> - Integrate Kafka Producer in <code>identity-service</code> and <code>site-service</code> <br> - Integrate Kafka Consumer in <code>notification-service</code> (<code>user.consumer.ts</code>) <br> - Add Kafka broker and Zookeeper config to <code>infra/docker-compose.yml</code> <br> - Update <code>shared-types</code> event definitions <br><br>- feat(ai-service): finalize integration and fix json parsing issues (#11) <br> <em>Detail:</em> * feat(core): implement Kafka event bus and @genzite/kafka module <br> - Create new internal package <code>@genzite/kafka</code> for microservices communication <br> - Integrate Kafka Producer in <code>identity-service</code> and <code>site-service</code> <br> - Integrate Kafka Consumer in <code>notification-service</code> (<code>user.consumer.ts</code>) <br> - Add Kafka broker and Zookeeper config to <code>infra/docker-compose.yml</code> <br> - Update <code>shared-types</code> event definitions <br>  <br> * feat(ai-service): finalize integration and fix json parsing issues <br>  <br> - Fixed 422 Gemini Parse Error by robustly extracting JSON from markdown blocks <br>  <br> - Configured NestJS feature modules (GenerationModule, RecruitmentModule) <br>  <br> - Added AiTaskLog tracking to CareerCoachService <br>  <br> - Enabled optional model override in recruitment endpoints <br>  <br> - Refactored dev.mjs script to use text log prefixes instead of emojis <br>  <br> - Moved test.http to qa/ai-service.http <br>  <br> - Switched to pnpm workspace and lockfile <br><br>- Feat/ai service core (#12) <br> <em>Detail:</em> * feat(core): implement Kafka event bus and @genzite/kafka module <br> - Create new internal package <code>@genzite/kafka</code> for microservices communication <br> - Integrate Kafka Producer in <code>identity-service</code> and <code>site-service</code> <br> - Integrate Kafka Consumer in <code>notification-service</code> (<code>user.consumer.ts</code>) <br> - Add Kafka broker and Zookeeper config to <code>infra/docker-compose.yml</code> <br> - Update <code>shared-types</code> event definitions <br>  <br> * feat(ai-service): finalize integration and fix json parsing issues <br>  <br> - Fixed 422 Gemini Parse Error by robustly extracting JSON from markdown blocks <br>  <br> - Configured NestJS feature modules (GenerationModule, RecruitmentModule) <br>  <br> - Added AiTaskLog tracking to CareerCoachService <br>  <br> - Enabled optional model override in recruitment endpoints <br>  <br> - Refactored dev.mjs script to use text log prefixes instead of emojis <br>  <br> - Moved test.http to qa/ai-service.http <br>  <br> - Switched to pnpm workspace and lockfile <br>  <br> * docs: update docs and architecture markdown for pnpm workspaces and ai-service integration <br>  <br> * docs: add DEEPSEEK_API_KEY to .env.example and development guide</td>
+					<td>21/06/2026</td>
+					<td>21/06/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Wed</td>
+					<td>- feat: implement data-service and kafka events (#13) <br> <em>Detail:</em> Co-authored-by: HungThichCodee <a href="mailto:danhcaolamhung9122004@gmail.com">danhcaolamhung9122004@gmail.com</a> <br><br>- Merge branch &lsquo;main&rsquo; into site-service <br><br>- Site service (#14) <br> <em>Detail:</em> * feat(site-service): implement canvas builder backend <br>  <br> * feat(site-service): implement canvas builder backend <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: PhiHung <a href="mailto:hungzk124@gmail.com">hungzk124@gmail.com</a> <br><br>- Site service (#15) <br> <em>Detail:</em> * feat(site-service): implement canvas builder backend <br>  <br> * feat(site-service): implement canvas builder backend <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: PhiHung <a href="mailto:hungzk124@gmail.com">hungzk124@gmail.com</a> <br><br>- Merge branch &lsquo;main&rsquo; into feat/ai-service-core <br><br>- feat(ai-service): add AI agents, MCP integration, BullMQ workers and refine pipeline (#16) <br> <em>Detail:</em> * feat(core): implement Kafka event bus and @genzite/kafka module <br> - Create new internal package <code>@genzite/kafka</code> for microservices communication <br> - Integrate Kafka Producer in <code>identity-service</code> and <code>site-service</code> <br> - Integrate Kafka Consumer in <code>notification-service</code> (<code>user.consumer.ts</code>) <br> - Add Kafka broker and Zookeeper config to <code>infra/docker-compose.yml</code> <br> - Update <code>shared-types</code> event definitions <br>  <br> * feat(ai-service): finalize integration and fix json parsing issues <br>  <br> - Fixed 422 Gemini Parse Error by robustly extracting JSON from markdown blocks <br>  <br> - Configured NestJS feature modules (GenerationModule, RecruitmentModule) <br>  <br> - Added AiTaskLog tracking to CareerCoachService <br>  <br> - Enabled optional model override in recruitment endpoints <br>  <br> - Refactored dev.mjs script to use text log prefixes instead of emojis <br>  <br> - Moved test.http to qa/ai-service.http <br>  <br> - Switched to pnpm workspace and lockfile <br>  <br> * docs: update docs and architecture markdown for pnpm workspaces and ai-service integration <br>  <br> * docs: add DEEPSEEK_API_KEY to .env.example and development guide <br>  <br> * feat(ai-service): add AI agents, MCP integration, BullMQ workers and refine pipeline</td>
+					<td>24/06/2026</td>
+					<td>24/06/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Fri</td>
+					<td>- Merge branch &lsquo;main&rsquo; into media/notification-service <br><br>- feat(media,notification): implement media upload and notification services (#17) <br> <em>Detail:</em> Co-authored-by: PhiHung <a href="mailto:hungzk124@gmail.com">hungzk124@gmail.com</a> <br><br>- Merge branch &lsquo;main&rsquo; into fix/project-wide-stabilization <br><br>- fix: project-wide build stabilization and conflict resolution (#18) <br> <em>Detail:</em> - Fixed shared-ui type generation (added rootDir, removed noEmit). <br>  <br> - Isolated Prisma Client generation across 6 microservices to prevent overwrite conflicts. <br>  <br> - Resolved implicit any type errors in frontend event handlers. <br>  <br> - Repaired syntax error in ai-service/src/gemini/gemini.client.ts. <br>  <br> - Resolved merge conflict in shared-types events union and Kafka topics. <br><br>- feat: complete all backend microservices, gateway, and unit tests (#19) <br> <em>Detail:</em> - Fixed gateway proxy bug by using http-proxy-middleware for proper file upload support <br>  <br> - Implemented real JWT validation in gateway auth.middleware.ts <br>  <br> - Added 100% unit test coverage for all 6 microservices (identity, notification, site, data, media, ai) and gateway <br>  <br> - Resolved hidden TypeScript type errors caught by tsc &ndash;noEmit across all microservices <br>  <br> - Cleaned up codebase by translating Vietnamese comments and string literals to English <br>  <br> - Backend is now fully production-ready</td>
+					<td>26/06/2026</td>
+					<td>26/06/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Sat</td>
+					<td>- fix: setup dev runner, kafka consumers, and reset migrations (#20) <br> <em>Detail:</em> - Reset Prisma migrations to a clean init state for all 6 microservices. <br>  <br> - Add concurrently dev script to package.json to start all services. <br>  <br> - Fix scripts/dev.mjs to inject KAFKA_CONSUMER_GROUP and parse SUPABASE_URL. <br>  <br> - Fix KafkaModule configuration in site-service to enable consumer. <br>  <br> - Refactor documentation and update docker-compose.yml DB configuration.</td>
+					<td>27/06/2026</td>
+					<td>27/06/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Tue</td>
+					<td>- Feat/epic ecommerce architecture (#21) <br> <em>Detail:</em> * fix: setup dev runner, kafka consumers, and reset migrations <br>  <br> - Reset Prisma migrations to a clean init state for all 6 microservices. <br>  <br> - Add concurrently dev script to package.json to start all services. <br>  <br> - Fix scripts/dev.mjs to inject KAFKA_CONSUMER_GROUP and parse SUPABASE_URL. <br>  <br> - Fix KafkaModule configuration in site-service to enable consumer. <br>  <br> - Refactor documentation and update docker-compose.yml DB configuration. <br>  <br> * feat(epic): E-Commerce Engine, SaaS Billing &amp; Architecture Upgrade\n\n- Add commerce-service with PayOS integration\n- Refactor App.tsx into scalable React architecture\n- Upgrade AI generation with Groq and RAG\n- Implement Identity SaaS Billing and Webhook Security <br>  <br> * fix: resolve race condition in SaaS billing and upgrade Gateway CORS <br>  <br> * docs: consolidate documentation, update AI architecture, and add Mermaid diagrams</td>
+					<td>30/06/2026</td>
+					<td>30/06/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Wed</td>
+					<td>- update ui fe ai/generate (#22) <br> <em>Detail:</em> * update ui fe ai/generate <br>  <br> * update-ui-ai_promt <br>  <br> * update-ui02 <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: HungThichCodee <a href="mailto:danhcaolamhung9122004@gmail.com">danhcaolamhung9122004@gmail.com</a> <br><br>- feat(ai): integrate Stitch SDK and Groq for site generation (#23) <br> <em>Detail:</em> Add @google/stitch-sdk and modelcontextprotocol dependencies <br>  <br> Implement SiteGeneratorService using Stitch for UI and Groq Llama 3 for QA <br>  <br> Add Missing GET endpoints for job polling in generation.controller.ts <br>  <br> Fix bugs in model parameter handling and meta-prompts <br>  <br> Translate Vietnamese comments to English and clean up Emojis <br>  <br> Clone stitch-skills for Agent workspace <br>  <br> Support previewing HTML and Images on Frontend AI Canvas <br><br>- Feat/ai stitch integration (#24) <br> <em>Detail:</em> * feat(ai): integrate Stitch SDK and Groq for site generation <br>  <br> Add @google/stitch-sdk and modelcontextprotocol dependencies <br>  <br> Implement SiteGeneratorService using Stitch for UI and Groq Llama 3 for QA <br>  <br> Add Missing GET endpoints for job polling in generation.controller.ts <br>  <br> Fix bugs in model parameter handling and meta-prompts <br>  <br> Translate Vietnamese comments to English and clean up Emojis <br>  <br> Clone stitch-skills for Agent workspace <br>  <br> Support previewing HTML and Images on Frontend AI Canvas <br>  <br> * docs: initialize project architecture and stack documentation in memory manifest <br><br>- Feat/fe/ai/generate (#25) <br> <em>Detail:</em> * update ui fe ai/generate <br>  <br> * update-ui-ai_promt <br>  <br> * update-ui02 <br>  <br> * update-gemini-ui-config <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: HungThichCodee <a href="mailto:danhcaolamhung9122004@gmail.com">danhcaolamhung9122004@gmail.com</a> <br><br>- feat(ai): integrate mcp tool registry &amp; enforce genzite design system in stitch (#26) <br> <em>Detail:</em> - Added tools support to all AI Clients (Gemini, DeepSeek, Groq) <br>  <br> - Injected ToolRegistry into SiteGeneratorService for MCP access <br>  <br> - Enforced Genzite Design System (Tailwind v4, React, Inter) in PM Prompt <br>  <br> - Fixed pipeline and worker types to match Stitch SDK return schema <br>  <br> - Added system architecture diagram source</td>
+					<td>01/07/2026</td>
+					<td>01/07/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Fri</td>
+					<td>- Feat/fe/ai/generate (#27) <br> <em>Detail:</em> * update ui fe ai/generate <br>  <br> * update-ui-ai_promt <br>  <br> * update-ui02 <br>  <br> * update-gemini-ui-config <br>  <br> * feat: implement MCP client service and integrate AI generation pipeline with site-builder components <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: HungThichCodee <a href="mailto:danhcaolamhung9122004@gmail.com">danhcaolamhung9122004@gmail.com</a> <br><br>- Merge branch &lsquo;main&rsquo; into thaihungfe <br><br>- update fe login and usermanegement (#28) <br> <em>Detail:</em> Co-authored-by: hungjdk <a href="mailto:nguyenhunghaivan9@gmail.com">nguyenhunghaivan9@gmail.com</a> <br><br>- Feat/UI home ai canvas agent logs (#30) <br> <em>Detail:</em> * feat: redesign Home, AI Canvas and Agent Logs UI <br>  <br> * remove unused file for clarity and cleanup <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: Developer <a href="mailto:dev@example.com">dev@example.com</a> <br><br>- refactor: remove redundant utility functions and associated test files (#31) <br><br>- remove unused configuration file and associated references (#33) <br><br>- feat(ai): Implement Hybrid Parallel UI Generation architecture (#35) <br> <em>Detail:</em> - Integrate NVIDIA Llama 3.3 for Widget Extraction and QA <br> - Refactor SiteGeneratorService to run Stitch and LLMs in parallel <br> - Add PRICING, FAQ, CONTACT widgets to WidgetRenderer <br> - Translate AWS Traffic Flow to English <br> - Add Zustand global cart store <br><br>- Feat/hybrid UI generation (#36) <br> <em>Detail:</em> * feat(ai): Implement Hybrid Parallel UI Generation architecture <br>  <br> - Integrate NVIDIA Llama 3.3 for Widget Extraction and QA <br> - Refactor SiteGeneratorService to run Stitch and LLMs in parallel <br> - Add PRICING, FAQ, CONTACT widgets to WidgetRenderer <br> - Translate AWS Traffic Flow to English <br> - Add Zustand global cart store <br>  <br> * chore: cleanup redundant .env.example and rename drawio file <br><br>- Thaihungfe (#37) <br> <em>Detail:</em> * update fe login and usermanegement <br>  <br> * chỉnh ảnh động login <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: hungjdk <a href="mailto:nguyenhunghaivan9@gmail.com">nguyenhunghaivan9@gmail.com</a> <br><br>- Thaihungfe (#38) <br> <em>Detail:</em> * update fe login and usermanegement <br>  <br> * chỉnh ảnh động login <br>  <br> * feat(ai-service): extract style properties from Stitch HTML to Genzite UI <br>  <br> * fix(site-service): allow AI to regenerate existing sites by overwriting pages <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: hungjdk <a href="mailto:nguyenhunghaivan9@gmail.com">nguyenhunghaivan9@gmail.com</a> <br><br>- feat(ai-service): refactor generateHybrid to 2-stage execution for full page color sync (#39)</td>
+					<td>03/07/2026</td>
+					<td>03/07/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Sat</td>
+					<td>- fix: restore legacy login page and clean up dead code (#41) <br> <em>Detail:</em> - Revert to original animated Login.tsx <br> - Add default admin credentials to login forms <br> - Delete unused/dead code discovered by knip across frontend and backend <br> - Hook up real APIs to Dashboard and UserManagement <br> - Fix Vite @emotion/is-prop-valid dependency issue <br><br>- update ui PageBuilder and fix show ui (#42) <br> <em>Detail:</em> * update ui PageBuilder and fix show ui <br>  <br> * feat: redirect to canvas on login <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: HungThichCodee <a href="mailto:danhcaolamhung9122004@gmail.com">danhcaolamhung9122004@gmail.com</a> <br><br>- Feat/unify home features contact footer nav (#44) <br> <em>Detail:</em> * feat: redesign Home, AI Canvas and Agent Logs UI <br>  <br> * remove unused file for clarity and cleanup <br>  <br> * feat: redesign Home, AI Canvas and Agent Logs UI (#29) <br>  <br> Co-authored-by: Developer <a href="mailto:dev@example.com">dev@example.com</a> <br> Co-authored-by: LowJiChow <a href="mailto:phucloidanghoconline@gmail.com">phucloidanghoconline@gmail.com</a> <br>  <br> * chore: remove obsolete worktree directory <br>  <br> * feat: add Features and Contact pages <br>  <br> * feat: redirect to canvas on login <br>  <br> * feat(frontend): unify Home/Features/Contact into one page and move nav to footer <br>  <br> * fix: resolve missed merge conflict markers in site generator <br>  <br> * fix: restore working site-generator from main <br>  <br> * fix: resolve typescript error with llmPromises vs widgetPromises <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: Developer <a href="mailto:dev@example.com">dev@example.com</a> <br> Co-authored-by: nghiadoan04 <a href="mailto:doannghia425268@gmail.com">doannghia425268@gmail.com</a> <br><br>- fix: remove rogue conflict marker in site generator (#45) <br><br>- Fix/rogue conflict marker (#46) <br> <em>Detail:</em> * fix: remove rogue conflict marker in site generator <br>  <br> * feat: initialize frontend application with routing, theme provider, and admin dashboard structure</td>
+					<td>04/07/2026</td>
+					<td>04/07/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Sun</td>
+					<td>- chinh lai login (#47) <br> <em>Detail:</em> Co-authored-by: hungjdk <a href="mailto:nguyenhunghaivan9@gmail.com">nguyenhunghaivan9@gmail.com</a> <br><br>- feat(identity): complete identity service and implement real email integration (#48) <br> <em>Detail:</em> Co-authored-by: HungThichCodee <a href="mailto:danhcaolamhung9122004@gmail.com">danhcaolamhung9122004@gmail.com</a></td>
+					<td>05/07/2026</td>
+					<td>05/07/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Mon</td>
+					<td>- feat: auth hardening, admin/workspace routing, and UI polish (#49) <br> <em>Detail:</em> Add refresh token flow, forgot/reset password, RBAC guards, workspace vs admin routes, profile avatar sync, and gateway proxy fixes. <br>  <br> Co-authored-by: HungThichCodee <a href="mailto:danhcaolamhung9122004@gmail.com">danhcaolamhung9122004@gmail.com</a> <br><br>- Feature/UI canvas refactor (#50) <br> <em>Detail:</em> * fix: remove rogue conflict marker in site generator <br>  <br> * feat: initialize frontend application with routing, theme provider, and admin dashboard structure <br>  <br> * feat(frontend): complete UI for Canvas Spotlight and Previewer <br>  <br> * fix(frontend): restore AdminNotificationsPage from main</td>
+					<td>06/07/2026</td>
+					<td>06/07/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Tue</td>
+					<td>- Feature/UI canvas refactor (#51) <br> <em>Detail:</em> * fix: remove rogue conflict marker in site generator <br>  <br> * feat: initialize frontend application with routing, theme provider, and admin dashboard structure <br>  <br> * feat(frontend): complete UI for Canvas Spotlight and Previewer <br>  <br> * fix(frontend): restore AdminNotificationsPage from main <br>  <br> * feat(ui): Canvas workspace refactor, style panel, code viewer, export and interactions <br>  <br> * fix(ui): remove duplicate onPreview and unused Copy import <br><br>-  feat: update Canvas Builder UI fix live viewer routing and optimize download (#52) <br> <em>Detail:</em> Co-authored-by: PhiHung <a href="mailto:hungzk124@gmail.com">hungzk124@gmail.com</a> <br><br>- Merge branch &lsquo;main&rsquo; into feature/ui-canvas-refactor <br><br>- Feature/UI canvas refactor (#53) <br> <em>Detail:</em> * fix: remove rogue conflict marker in site generator <br>  <br> * feat: initialize frontend application with routing, theme provider, and admin dashboard structure <br>  <br> * feat(frontend): complete UI for Canvas Spotlight and Previewer <br>  <br> * fix(frontend): restore AdminNotificationsPage from main <br>  <br> * feat(ui): Canvas workspace refactor, style panel, code viewer, export and interactions <br>  <br> * fix(ui): remove duplicate onPreview and unused Copy import <br>  <br> * style(ui): update EditViewer and PreviewViewer layout</td>
+					<td>07/07/2026</td>
+					<td>07/07/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Wed</td>
+					<td>- edit ui admin-identity-profile-notification (#54) <br> <em>Detail:</em> Co-authored-by: HungThichCodee <a href="mailto:danhcaolamhung9122004@gmail.com">danhcaolamhung9122004@gmail.com</a></td>
+					<td>08/07/2026</td>
+					<td>08/07/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Thu</td>
+					<td>- Feature/UI canvas refactor (#55) <br> <em>Detail:</em> * fix: remove rogue conflict marker in site generator <br>  <br> * feat: initialize frontend application with routing, theme provider, and admin dashboard structure <br>  <br> * feat(frontend): complete UI for Canvas Spotlight and Previewer <br>  <br> * fix(frontend): restore AdminNotificationsPage from main <br>  <br> * feat(ui): Canvas workspace refactor, style panel, code viewer, export and interactions <br>  <br> * fix(ui): remove duplicate onPreview and unused Copy import <br>  <br> * style(ui): update EditViewer and PreviewViewer layout <br>  <br> * feat(ai-logs, site-builder): persist real generation metrics, dynamic action history, remove mock descriptions, and store prompt in DB <br><br>- Feature/update builder UI and fixes (#56) <br> <em>Detail:</em> * feat: update Canvas Builder UI fix live viewer routing and optimize download <br>  <br> * style: improve layout Login page, Home page, Dashboard page <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: PhiHung <a href="mailto:hungzk124@gmail.com">hungzk124@gmail.com</a> <br><br>- fix(builder): resolve EditViewer.tsx merge conflicts and enforce English UI modular architecture (#57)</td>
+					<td>09/07/2026</td>
+					<td>09/07/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Tue</td>
+					<td>- Feat/cognito integration s3 (#58) <br> <em>Detail:</em> * đăng nhập cognito, đăng ảnh từ media, chỉnh profile ảnh, up ảnh <br>  <br> * sửa lỗi đăng nhập login, cognto <br>  <br> * chỉnh lại login <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: hungjdk <a href="mailto:nguyenhunghaivan9@gmail.com">nguyenhunghaivan9@gmail.com</a></td>
+					<td>14/07/2026</td>
+					<td>14/07/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Wed</td>
+					<td>- Fix/UI canvas refactor resolution (#59) <br> <em>Detail:</em> * fix(builder): resolve EditViewer.tsx merge conflicts and enforce English UI modular architecture <br>  <br> * feat(ai-service,frontend): implement prompt improvement glowing UI and fallback timeouts <br>  <br> * feat(ai-service,frontend): implement component-driven generation architecture <br>  <br> * ﻿feat(ui): refine CanvasWorkspace and View Details metrics <br>  <br> - Fix Page Settings side panel to auto-close when switching to other tools <br> - Update Custom Tag UI to automatically display newly saved custom tags as pills <br> - Fix App URL validation to instantly show &lsquo;Available&rsquo; for default subdomain <br> - Replace View Details mock data with real-time metrics (Slug, Device Size, Elements) <br> - Add Primary Color indicator dot next to DESIGN.md in the Properties panel <br> - Implement a deep recursive regex scanner to successfully extract all nested image URLs from widgets <br> - Update Design Prompt fallback logic to properly read from project settings <br><br>- chore(i18n): translate Vietnamese hardcoded strings to English and clean up dead AI files (#61) <br><br>- Feat/cognito integration s3 (#60) <br> <em>Detail:</em> * đăng nhập cognito, đăng ảnh từ media, chỉnh profile ảnh, up ảnh <br>  <br> * sửa lỗi đăng nhập login, cognto <br>  <br> * chỉnh lại login <br>  <br> * chỉnh lại giao diện <br>  <br> . <br>  <br> * fix(identity): correctly set default role to VIEWER on SSO/Cognito registration <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: hungjdk <a href="mailto:nguyenhunghaivan9@gmail.com">nguyenhunghaivan9@gmail.com</a> <br><br>- Merge branch &lsquo;main&rsquo; into feat/deploy-s3-cognito <br><br>- Feat/deploy s3 cognito (#62) <br> <em>Detail:</em> * đăng nhập cognito, đăng ảnh từ media, chỉnh profile ảnh, up ảnh <br>  <br> * sửa lỗi đăng nhập login, cognto <br>  <br> * chỉnh lại login <br>  <br> * chỉnh lại giao diện <br>  <br> . <br>  <br> * fix(identity): correctly set default role to VIEWER on SSO/Cognito registration <br>  <br> * chỉnh giao diện phần được giao <br>  <br> * chỉnh lại admin 1 tý <br>  <br> . <br>  <br> * sửa bell <br>  <br> &hellip;. <br>  <br> * sửa lỗi change passwword <br>  <br> . <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: hungjdk <a href="mailto:nguyenhunghaivan9@gmail.com">nguyenhunghaivan9@gmail.com</a></td>
+					<td>15/07/2026</td>
+					<td>15/07/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Thu</td>
+					<td>- chore: remove commerce service and setup production CI/CD <br> <em>Detail:</em> - Removed decommissioned Commerce Service and cleaned up its dead code across frontend and backend. <br> - Cleaned up unused test files in Identity Service. <br> - Removed obsolete commerce-related scripts from package.json and scripts/dev.mjs. <br> - Updated all architecture documentation to reflect the finalized 6-service model. <br> - Created centralized infra/Dockerfile.prod optimized for pnpm workspaces. <br> - Implemented GitHub Actions for backend ECS deployment (deploy-production.yml). <br> - Implemented GitHub Actions for frontend Vercel deployment (deploy-frontend.yml). <br> - Updated README.md and DEVELOPMENT.md with Production Deployment instructions. <br><br>- chore: remove commerce service and setup production CI/CD (#63) <br> <em>Detail:</em> - Removed decommissioned Commerce Service and cleaned up its dead code across frontend and backend. <br> - Cleaned up unused test files in Identity Service. <br> - Removed obsolete commerce-related scripts from package.json and scripts/dev.mjs. <br> - Updated all architecture documentation to reflect the finalized 6-service model. <br> - Created centralized infra/Dockerfile.prod optimized for pnpm workspaces. <br> - Implemented GitHub Actions for backend ECS deployment (deploy-production.yml). <br> - Implemented GitHub Actions for frontend Vercel deployment (deploy-frontend.yml). <br> - Updated README.md and DEVELOPMENT.md with Production Deployment instructions. <br><br>- chore(typescript): enforce strict typing rules across monorepo <br> <em>Detail:</em> - Enabled strict rules (noImplicitAny, etc.) for 100% type safety. <br>  <br> - Created RequestWithUser and AuthUser interfaces in shared-types. <br>  <br> - Fixed gateway and identity-service auth middleware typing. <br>  <br> - Resolved implicit any issues in ai.consumer.ts and site-generator.service.ts. <br><br>-  Merge main into chore/cleanup-and-cicd <br><br>- Chore/cleanup and cicd (#64) <br> <em>Detail:</em> * chore: remove commerce service and setup production CI/CD <br>  <br> - Removed decommissioned Commerce Service and cleaned up its dead code across frontend and backend. <br> - Cleaned up unused test files in Identity Service. <br> - Removed obsolete commerce-related scripts from package.json and scripts/dev.mjs. <br> - Updated all architecture documentation to reflect the finalized 6-service model. <br> - Created centralized infra/Dockerfile.prod optimized for pnpm workspaces. <br> - Implemented GitHub Actions for backend ECS deployment (deploy-production.yml). <br> - Implemented GitHub Actions for frontend Vercel deployment (deploy-frontend.yml). <br> - Updated README.md and DEVELOPMENT.md with Production Deployment instructions. <br>  <br> * chore(typescript): enforce strict typing rules across monorepo <br>  <br> - Enabled strict rules (noImplicitAny, etc.) for 100% type safety. <br>  <br> - Created RequestWithUser and AuthUser interfaces in shared-types. <br>  <br> - Fixed gateway and identity-service auth middleware typing. <br>  <br> - Resolved implicit any issues in ai.consumer.ts and site-generator.service.ts. <br><br>- fix: resolve frontend build errors, fix feedback API endpoint, and update UI wording <br><br>- Chore/cleanup and cicd (#65) <br> <em>Detail:</em> * chore: remove commerce service and setup production CI/CD <br>  <br> - Removed decommissioned Commerce Service and cleaned up its dead code across frontend and backend. <br> - Cleaned up unused test files in Identity Service. <br> - Removed obsolete commerce-related scripts from package.json and scripts/dev.mjs. <br> - Updated all architecture documentation to reflect the finalized 6-service model. <br> - Created centralized infra/Dockerfile.prod optimized for pnpm workspaces. <br> - Implemented GitHub Actions for backend ECS deployment (deploy-production.yml). <br> - Implemented GitHub Actions for frontend Vercel deployment (deploy-frontend.yml). <br> - Updated README.md and DEVELOPMENT.md with Production Deployment instructions. <br>  <br> * chore(typescript): enforce strict typing rules across monorepo <br>  <br> - Enabled strict rules (noImplicitAny, etc.) for 100% type safety. <br>  <br> - Created RequestWithUser and AuthUser interfaces in shared-types. <br>  <br> - Fixed gateway and identity-service auth middleware typing. <br>  <br> - Resolved implicit any issues in ai.consumer.ts and site-generator.service.ts. <br>  <br> * fix: resolve frontend build errors, fix feedback API endpoint, and update UI wording</td>
+					<td>16/07/2026</td>
+					<td>16/07/2026</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Fri</td>
+					<td>- feat: setup Nginx reverse proxy and fix frontend API routing <br><br>- Deploy main (#66) <br> <em>Detail:</em> * Fix canvas <br>  <br> * feat: setup Nginx reverse proxy and fix frontend API routing <br>  <br> &mdash;&mdash;&mdash; <br>  <br> Co-authored-by: PhiHung <a href="mailto:hungzk124@gmail.com">hungzk124@gmail.com</a> <br><br>- Fix Dockerfile missing dist folder <br><br>- Update guest email <br><br>- Remove local volume mounts in production <br><br>- Fix Prisma generated client and migrate deploy in prod <br><br>- Add &ndash;yes flag to npx prisma to avoid prompt hanging <br><br>- Bypass npx entirely for prisma to prevent hanging <br><br>- Install prisma CLI globally in runner image to fix migration hang <br><br>- Fix Nginx DNS cache - use Docker resolver to prevent stale upstream IPs <br><br>- Fix: pin prisma CLI to v6 to match project version (v7 has breaking schema changes) <br><br>- Fix: add missing &lsquo;ms&rsquo; dependency in identity-service <br><br>- Fix: commit updated pnpm-lock.yaml for identity-service dependencies <br><br>- Fix: add KAFKA_CONSUMER_GROUP env var to site service <br><br>- feat: add CanvasPageFrame component for visual layout management with undo/redo and responsive viewport support <br><br>- Fix: auto-unwrap nested {data:[]} API responses to prevent .filter() crash <br><br>- Fix: expand API response unwrapper to handle {items:[]} and other wrapper formats <br><br>- Fix: normalize pages prop to always be array in CanvasWorkspace <br><br>- Fix: replace all widgets.filter/some in JSX render with safeWidgets <br><br>- Fix: NotificationBell - use Array.isArray instead of</td>
+					<td></td>
+					<td>to normalize notifications response <br><br>- Fix: type-only import for AppNotification <br><br>- feat: implement user management dashboard with role, status, and filter controls alongside layout and builder components. <br><br>- feat: implement secure API client with JWT refresh logic and add admin notification dashboard page <br><br>- feat: implement UsersService with user lifecycle management, profile updates, audit logging, and atomic credit operations <br><br>- feat: add Nginx configuration for API and frontend reverse proxying with security headers <br><br>- feat: add nginx configuration with security headers, gzip, and proxy routing for frontend and API services <br><br>- fix: prevent 404/400 screen on PageBuilder during gen-* site bootstrap <br><br>- Merge branch &lsquo;main&rsquo; of <a href="https://github.com/KrisCTer/Genzite">https://github.com/KrisCTer/Genzite</a> into deploy_main <br> <em>Detail:</em> # Conflicts: <br> #	apps/site-service/src/pages/pages.service.ts <br> #	infra/Dockerfile.prod <br> #	infra/docker-compose.prod.yml <br> #	infra/nginx/nginx.conf <br><br>- feat: implement PagesService for CRUD operations with ownership and access validation <br><br>- feat: add production docker-compose configuration for core services and infrastructure <br><br>- feat: initialize site-service entry point and configure nginx reverse proxy with large payload support <br><br>- feat: implement EditViewer page with GrapesJS integration, canvas controls, and widget state management <br><br>- fix(site-service): add express dependency to support increased JSON body limits <br><br>- chore(frontend): log exact HTML content when API returns HTML instead of JSON <br><br>- fix(site-service): allow shared users to view and edit page widgets <br><br>- fix(frontend): enforce 403 access denied overlay when user is not authorized to view a site <br><br>- feat(frontend): set default canvas device to desktop in CanvasWorkspace <br><br>- fix(site-service): block public viewers from editing widgets and allow collaborators write access <br><br>- fix(site-service): allow collaborators to retain edit rights when site is in Public mode <br><br>- fix(frontend): make publish domain dynamic based on current hostname instead of hardcoded genzite.studio <br><br>- fix(media-service): disable AWS SDK v3 CRC32 checksum to fix SignatureDoesNotMatch on presigned PUT uploads <br><br>- fix(infra): fix frontend container port from 5173 to 3000 to match Dockerfile.prod serve port <br><br>- feat(frontend): require authentication for live viewer and redirect back after login <br><br>- fix(frontend): resolve syntax and strict typescript errors <br><br>- fix(infra): pass EMAIL_USERNAME and EMAIL_PASSWORD to notification and identity services <br><br>- feat(frontend): add grapesjs loading state, save animation, and unsaved changes warning <br><br>- feat: add ThemeEditorPanel component and design system generation utilities <br><br>-  fix: make live route public and add smtp configuration <br><br>-  fix: resolve React Hook rule violation in GrapesEditor <br><br>-  fix: pass AWS credentials to media container <br><br>-  feat: improve ThemeEditorPanel UX for selecting and applying themes <br><br>-  fix: resolve TS errors related to isDirtyRef in GrapesEditor <br><br>-  fix: use FRONTEND_URL environment variable for invite email link <br><br>-  fix: use absolute API URL to fix save error when editing from subdomains <br><br>-  fix: remove dot pattern causing shimmer effect in AI log sidebar <br><br>-  feat: add public pages endpoint and update LiveViewer to not require login <br><br>-  fix: prevent double exit prompt on back to project button <br><br>-  fix: inject VITE_API_URL from process.env at build time via vite.config define <br><br>-  fix: prevent login redirect on public subdomains <br><br>-  fix: load env file in vite config for local dev</td>
+					<td>17/07/2026</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="project-achievements">Project Achievements:</h3>
+<ul>
+<li>[Tổng hợp ngắn gọn các kết quả đạt được từ các task trên]</li>
+<li>[Ví dụ: Ổn định môi trường, hoàn thành X tính năng, viết được Y test case&hellip;]</li>
+</ul>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/1-worklog/1.1-week1/" title="Week 1 Worklog"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/1-worklog/1.1-week1/week_worklog_draft/" title="Project Worklog" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1784306288"></script>
+    <script src="/js/perfect-scrollbar.min.js?1784306288"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1784306288"></script>
+    <script src="/js/jquery.sticky.js?1784306288"></script>
+    <script src="/js/featherlight.min.js?1784306288"></script>
+    <script src="/js/highlight.pack.js?1784306288"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1784306288"></script>
+    <script src="/js/learn.js?1784306288"></script>
+    <script src="/js/hugo-learn.js?1784306288"></script>
+
+    <link href="/mermaid/mermaid.css?1784306288" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1784306288"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>
+
